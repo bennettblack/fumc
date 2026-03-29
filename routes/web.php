@@ -7,7 +7,6 @@ Route::view('/', 'pages.home')->name('home');
 // Ministries
 Route::view('/ministries/children', 'pages.ministries.children')->name('ministries.children');
 Route::view('/ministries/worship-music', 'pages.ministries.worship-music')->name('ministries.worship-music');
-Route::view('/ministries/clark-weekday-center', 'pages.ministries.clark-weekday-center')->name('ministries.clark-weekday-center');
 Route::view('/ministries/upcoming-events', 'pages.ministries.upcoming-events')->name('ministries.upcoming-events');
 
 // About

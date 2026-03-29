@@ -3,7 +3,7 @@
         <div class="flex h-20 items-center justify-between">
             {{-- Logo / Church Name --}}
             <a href="{{ route('home') }}" class="flex items-center gap-3">
-                <span class="text-xl font-bold tracking-tight text-red">FUMC</span>
+                <img src="{{ Storage::disk('r2')->url('fumc_v.png') }}" alt="FUMC Logo" class="h-20 w-auto">
             </a>
 
             {{-- Desktop Nav --}}
@@ -21,7 +21,7 @@
                         <span class="block px-4 py-2 text-sm text-gray-400">Student <span class="text-xs">(Coming Soon)</span></span>
                         <span class="block px-4 py-2 text-sm text-gray-400">Adult <span class="text-xs">(Coming Soon)</span></span>
                         <a href="{{ route('ministries.worship-music') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Worship & Music</a>
-                        <a href="{{ route('ministries.clark-weekday-center') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Clark Weekday Center INC</a>
+                        <a href="{{ route('clark-weekday') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Clark Weekday Center INC</a>
                         <span class="block px-4 py-2 text-sm text-gray-400">Missions/Outreach <span class="text-xs">(Coming Soon)</span></span>
                         <a href="{{ route('ministries.upcoming-events') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Upcoming Events</a>
                     </div>
@@ -85,7 +85,7 @@
                     <span class="block px-3 py-2 text-sm text-gray-400">Student (Coming Soon)</span>
                     <span class="block px-3 py-2 text-sm text-gray-400">Adult (Coming Soon)</span>
                     <a href="{{ route('ministries.worship-music') }}" class="block rounded-md px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Worship & Music</a>
-                    <a href="{{ route('ministries.clark-weekday-center') }}" class="block rounded-md px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Clark Weekday Center INC</a>
+                    <a href="{{ route('clark-weekday') }}" class="block rounded-md px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Clark Weekday Center INC</a>
                     <span class="block px-3 py-2 text-sm text-gray-400">Missions/Outreach (Coming Soon)</span>
                     <a href="{{ route('ministries.upcoming-events') }}" class="block rounded-md px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Upcoming Events</a>
                 </div>
