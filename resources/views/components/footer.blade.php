@@ -3,11 +3,13 @@
         <div class="grid grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-4">
             {{-- Church Info --}}
             <div class="lg:col-span-1">
-                <h3 class="text-lg font-bold text-red">FUMC</h3>
-                <p class="mt-2 text-sm text-gray-400">First United Methodist Church</p>
-                <p class="mt-4 text-sm text-gray-400">
-                    Sunday Worship<br>
-                    Service Times TBD
+                <img src="{{ Storage::disk('r2')->url('cross-and-flame-footer.svg') }}" alt="FUMC" class="h-24 w-auto">
+                <p class="mt-3 text-base font-bold text-white">First United Methodist Church</p>
+                <p class="text-sm font-bold  text-teal">Texarkana, Arkansas</p>
+                <p class="mt-4 text-xs font-semibold uppercase tracking-wider text-gray-400">Sundays</p>
+                <p class="mt-1 text-sm text-white">
+                    9:30 — Sunday School<br>
+                    10:30 — Worship Service
                 </p>
             </div>
 
@@ -45,7 +47,7 @@
         </div>
 
         <div class="mt-12 border-t border-gray-800 pt-8 text-center">
-            <p class="text-sm text-gray-500">&copy; {{ date('Y') }} First United Methodist Church. All rights reserved.</p>
+            <p class="text-sm text-gray-500">&copy; {{ date('Y') }} First United Methodist Church</p>
         </div>
     </div>
 </footer>
