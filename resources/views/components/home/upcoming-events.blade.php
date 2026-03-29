@@ -8,7 +8,7 @@
 
         <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {{-- Placeholder event cards — replace with dynamic content --}}
-            <div class="overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-black/5">
+            <div class="overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-black/5">
                 <div class="bg-red px-6 py-3">
                     <p class="text-sm font-bold text-white">Sunday, April 6</p>
                 </div>
@@ -19,7 +19,7 @@
                 </div>
             </div>
 
-            <div class="overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-black/5">
+            <div class="overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-black/5">
                 <div class="bg-teal px-6 py-3">
                     <p class="text-sm font-bold text-white">Thursday, April 10</p>
                 </div>
@@ -30,7 +30,7 @@
                 </div>
             </div>
 
-            <div class="overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-black/5">
+            <div class="overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-black/5">
                 <div class="bg-red px-6 py-3">
                     <p class="text-sm font-bold text-white">Sunday, April 13</p>
                 </div>
@@ -43,7 +43,7 @@
         </div>
 
         <div class="mt-10 text-center">
-            <a href="{{ route('ministries.upcoming-events') }}" class="inline-flex items-center gap-2 rounded-md bg-red px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-red-dark">
+            <a href="{{ route('ministries.upcoming-events') }}" class="inline-flex items-center gap-2 rounded bg-red px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-red-dark">
                 View All Events
                 <svg xmlns="http://www.w3.org/2000/svg" class="size-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" /></svg>
             </a>

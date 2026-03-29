@@ -16,14 +16,12 @@
                         Ministries
                         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
                     </button>
-                    <div x-show="open" x-transition.opacity class="absolute left-0 top-full mt-0 w-56 rounded-md bg-white py-2 shadow-lg ring-1 ring-black/5">
+                    <div x-show="open" x-transition.opacity class="absolute left-0 top-full mt-0 w-56 rounded bg-white py-2 shadow-lg ring-1 ring-black/5">
                         <a href="{{ route('ministries.children') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Children</a>
                         <span class="block px-4 py-2 text-sm text-gray-400">Student <span class="text-xs">(Coming Soon)</span></span>
                         <span class="block px-4 py-2 text-sm text-gray-400">Adult <span class="text-xs">(Coming Soon)</span></span>
                         <a href="{{ route('ministries.worship-music') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Worship & Music</a>
-                        <a href="{{ route('clark-weekday') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Clark Weekday Center INC</a>
                         <span class="block px-4 py-2 text-sm text-gray-400">Missions/Outreach <span class="text-xs">(Coming Soon)</span></span>
-                        <a href="{{ route('ministries.upcoming-events') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Upcoming Events</a>
                     </div>
                 </div>
 
@@ -33,7 +31,7 @@
                         About
                         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
                     </button>
-                    <div x-show="open" x-transition.opacity class="absolute left-0 top-full mt-0 w-48 rounded-md bg-white py-2 shadow-lg ring-1 ring-black/5">
+                    <div x-show="open" x-transition.opacity class="absolute left-0 top-full mt-0 w-48 rounded bg-white py-2 shadow-lg ring-1 ring-black/5">
                         <a href="{{ route('about.our-team') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Our Team</a>
                         <a href="{{ route('about.what-we-believe') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">What We Believe</a>
                         <a href="{{ route('about.history') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">History</a>
@@ -45,24 +43,25 @@
                 {{-- Resources Dropdown --}}
                 <div x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false" class="relative">
                     <button class="px-3 py-2 text-sm font-medium text-black hover:text-red transition-colors inline-flex items-center gap-1 {{ request()->routeIs('resources.*') ? 'text-red' : '' }}">
-                        Resources/Videos
+                        Resources
                         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
                     </button>
-                    <div x-show="open" x-transition.opacity class="absolute left-0 top-full mt-0 w-48 rounded-md bg-white py-2 shadow-lg ring-1 ring-black/5">
+                    <div x-show="open" x-transition.opacity class="absolute left-0 top-full mt-0 w-48 rounded bg-white py-2 shadow-lg ring-1 ring-black/5">
                         <a href="{{ route('resources.the-happenings') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">The Happenings</a>
                         <a href="{{ route('resources.untimely-ramblings') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Untimely Ramblings</a>
                         <a href="{{ route('resources.videos') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Videos</a>
                         <a href="{{ route('resources.video-archive') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Video Archive</a>
+                        <a href="{{ route('ministries.upcoming-events') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Upcoming Events</a>
                     </div>
                 </div>
 
                 <a href="{{ route('clark-weekday') }}" class="px-3 py-2 text-sm font-medium text-black hover:text-red transition-colors {{ request()->routeIs('clark-weekday') ? 'text-red' : '' }}">Clark Weekday</a>
 
-                <a href="{{ route('contact') }}" class="ml-2 inline-flex items-center rounded-md bg-red px-4 py-2 text-sm font-semibold text-white hover:bg-red-dark transition-colors">Contact Us</a>
+                <a href="{{ route('contact') }}" class="ml-2 inline-flex items-center rounded bg-red px-4 py-2 text-sm font-semibold text-white hover:bg-red-dark transition-colors">Contact Us</a>
             </div>
 
             {{-- Mobile Menu Button --}}
-            <button @click="mobileOpen = !mobileOpen" class="lg:hidden inline-flex items-center justify-center rounded-md p-2 text-black hover:text-red">
+            <button @click="mobileOpen = !mobileOpen" class="lg:hidden inline-flex items-center justify-center rounded p-2 text-black hover:text-red">
                 <svg x-show="!mobileOpen" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
                 <svg x-show="mobileOpen" x-cloak class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
             </button>
@@ -72,57 +71,56 @@
     {{-- Mobile Menu --}}
     <div x-show="mobileOpen" x-cloak x-transition class="lg:hidden border-t border-light-gray bg-white">
         <div class="space-y-1 px-4 py-4">
-            <a href="{{ route('home') }}" class="block rounded-md px-3 py-2 text-base font-medium hover:bg-light-gray hover:text-red">Home</a>
+            <a href="{{ route('home') }}" class="block rounded px-3 py-2 text-base font-medium hover:bg-light-gray hover:text-red">Home</a>
 
             {{-- Ministries --}}
             <div x-data="{ open: false }">
-                <button @click="open = !open" class="flex w-full items-center justify-between rounded-md px-3 py-2 text-base font-medium hover:bg-light-gray hover:text-red">
+                <button @click="open = !open" class="flex w-full items-center justify-between rounded px-3 py-2 text-base font-medium hover:bg-light-gray hover:text-red">
                     Ministries
                     <svg :class="open && 'rotate-180'" class="h-4 w-4 transition-transform" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
                 </button>
                 <div x-show="open" x-collapse class="ml-4 space-y-1">
-                    <a href="{{ route('ministries.children') }}" class="block rounded-md px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Children</a>
+                    <a href="{{ route('ministries.children') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Children</a>
                     <span class="block px-3 py-2 text-sm text-gray-400">Student (Coming Soon)</span>
                     <span class="block px-3 py-2 text-sm text-gray-400">Adult (Coming Soon)</span>
-                    <a href="{{ route('ministries.worship-music') }}" class="block rounded-md px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Worship & Music</a>
-                    <a href="{{ route('clark-weekday') }}" class="block rounded-md px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Clark Weekday Center INC</a>
+                    <a href="{{ route('ministries.worship-music') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Worship & Music</a>
                     <span class="block px-3 py-2 text-sm text-gray-400">Missions/Outreach (Coming Soon)</span>
-                    <a href="{{ route('ministries.upcoming-events') }}" class="block rounded-md px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Upcoming Events</a>
                 </div>
             </div>
 
             {{-- About --}}
             <div x-data="{ open: false }">
-                <button @click="open = !open" class="flex w-full items-center justify-between rounded-md px-3 py-2 text-base font-medium hover:bg-light-gray hover:text-red">
+                <button @click="open = !open" class="flex w-full items-center justify-between rounded px-3 py-2 text-base font-medium hover:bg-light-gray hover:text-red">
                     About
                     <svg :class="open && 'rotate-180'" class="h-4 w-4 transition-transform" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
                 </button>
                 <div x-show="open" x-collapse class="ml-4 space-y-1">
-                    <a href="{{ route('about.our-team') }}" class="block rounded-md px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Our Team</a>
-                    <a href="{{ route('about.what-we-believe') }}" class="block rounded-md px-3 py-2 text-sm hover:bg-light-gray hover:text-red">What We Believe</a>
-                    <a href="{{ route('about.history') }}" class="block rounded-md px-3 py-2 text-sm hover:bg-light-gray hover:text-red">History</a>
+                    <a href="{{ route('about.our-team') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Our Team</a>
+                    <a href="{{ route('about.what-we-believe') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">What We Believe</a>
+                    <a href="{{ route('about.history') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">History</a>
                 </div>
             </div>
 
-            <a href="{{ route('being-the-church') }}" class="block rounded-md px-3 py-2 text-base font-medium hover:bg-light-gray hover:text-red">Being the Church</a>
+            <a href="{{ route('being-the-church') }}" class="block rounded px-3 py-2 text-base font-medium hover:bg-light-gray hover:text-red">Being the Church</a>
 
             {{-- Resources --}}
             <div x-data="{ open: false }">
-                <button @click="open = !open" class="flex w-full items-center justify-between rounded-md px-3 py-2 text-base font-medium hover:bg-light-gray hover:text-red">
-                    Resources/Videos
+                <button @click="open = !open" class="flex w-full items-center justify-between rounded px-3 py-2 text-base font-medium hover:bg-light-gray hover:text-red">
+                    Resources
                     <svg :class="open && 'rotate-180'" class="h-4 w-4 transition-transform" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
                 </button>
                 <div x-show="open" x-collapse class="ml-4 space-y-1">
-                    <a href="{{ route('resources.the-happenings') }}" class="block rounded-md px-3 py-2 text-sm hover:bg-light-gray hover:text-red">The Happenings</a>
-                    <a href="{{ route('resources.untimely-ramblings') }}" class="block rounded-md px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Untimely Ramblings</a>
-                    <a href="{{ route('resources.videos') }}" class="block rounded-md px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Videos</a>
-                    <a href="{{ route('resources.video-archive') }}" class="block rounded-md px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Video Archive</a>
+                    <a href="{{ route('resources.the-happenings') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">The Happenings</a>
+                    <a href="{{ route('resources.untimely-ramblings') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Untimely Ramblings</a>
+                    <a href="{{ route('resources.videos') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Videos</a>
+                    <a href="{{ route('resources.video-archive') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Video Archive</a>
+                    <a href="{{ route('ministries.upcoming-events') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Upcoming Events</a>
                 </div>
             </div>
 
-            <a href="{{ route('clark-weekday') }}" class="block rounded-md px-3 py-2 text-base font-medium hover:bg-light-gray hover:text-red">Clark Weekday</a>
+            <a href="{{ route('clark-weekday') }}" class="block rounded px-3 py-2 text-base font-medium hover:bg-light-gray hover:text-red">Clark Weekday</a>
 
-            <a href="{{ route('contact') }}" class="mt-2 block rounded-md bg-red px-3 py-2 text-center text-base font-semibold text-white hover:bg-red-dark">Contact Us</a>
+            <a href="{{ route('contact') }}" class="mt-2 block rounded bg-red px-3 py-2 text-center text-base font-semibold text-white hover:bg-red-dark">Contact Us</a>
         </div>
     </div>
 </nav>

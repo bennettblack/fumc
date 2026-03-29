@@ -9,10 +9,10 @@
             </div>
             <div class="flex justify-center">
                 <figure class="relative">
-                    <div class="absolute -bottom-4 -right-4 h-96 w-80 rounded-lg bg-teal/20"></div>
+                    <div class="absolute -bottom-4 -right-4 h-96 w-80 rounded-md bg-teal/20"></div>
                     <div class="relative">
-                        <img src="{{ Storage::disk('r2')->url('jaimie_alexander.jpeg') }}" alt="Pastor Jaimie Alexander" class="h-96 w-80 rounded-lg object-cover shadow-lg">
-                        <div class="absolute inset-0 rounded-lg ring-1 ring-inset ring-black/10"></div>
+                        <img src="{{ Storage::disk('r2')->url('jaimie_alexander.jpeg') }}" alt="Pastor Jaimie Alexander" class="h-96 w-80 rounded-md object-cover shadow-lg">
+                        <div class="absolute inset-0 rounded-md ring-1 ring-inset ring-black/10"></div>
                     </div>
                     <figcaption class="relative mt-3 text-center text-sm font-semibold text-gray-700">Rev. Jaimie Alexander</figcaption>
                 </figure>

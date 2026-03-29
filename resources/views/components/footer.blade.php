@@ -44,7 +44,7 @@
 
         {{-- Info strip: Address + Service Times --}}
         <div class="mt-10 grid grid-cols-1 gap-4 border-t border-neutral-700 pt-8 sm:grid-cols-3">
-            <div class="rounded-lg border border-white/10 bg-white/5 px-6 py-5">
+            <div class="rounded-md border border-white/10 bg-white/5 px-6 py-5">
                 <p class="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-teal">
                     <svg xmlns="http://www.w3.org/2000/svg" class="size-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" /></svg>
                     Sundays
@@ -52,7 +52,7 @@
                 <p class="mt-2 text-base font-medium text-white">9:30 — Sunday School</p>
                 <p class="text-base font-medium text-white">10:30 — Worship Service</p>
             </div>
-            <a href="https://maps.app.goo.gl/2Pobtw6FuyyqfoxN6" target="_blank" rel="noopener noreferrer" class="group rounded-lg border border-white/10 bg-white/5 px-6 py-5 transition-colors hover:bg-white/10">
+            <a href="https://maps.app.goo.gl/2Pobtw6FuyyqfoxN6" target="_blank" rel="noopener noreferrer" class="group rounded-md border border-white/10 bg-white/5 px-6 py-5 transition-colors hover:bg-white/10">
                 <p class="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-teal">
                     <svg xmlns="http://www.w3.org/2000/svg" class="size-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" /></svg>
                     Address
@@ -60,7 +60,7 @@
                 <p class="mt-2 text-base font-medium text-white">420 East Ninth Street</p>
                 <p class="text-base font-medium text-white">Texarkana, AR 71854</p>
             </a>
-            <div class="rounded-lg border border-white/10 bg-white/5 px-6 py-5">
+            <div class="rounded-md border border-white/10 bg-white/5 px-6 py-5">
                 <p class="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-teal">
                     <svg xmlns="http://www.w3.org/2000/svg" class="size-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" /></svg>
                     Follow Us

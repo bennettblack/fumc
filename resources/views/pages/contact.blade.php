@@ -28,7 +28,7 @@
                 </div>
 
                 {{-- Contact Form Placeholder --}}
-                <div class="rounded-lg bg-light-gray p-8">
+                <div class="rounded-md bg-light-gray p-8">
                     <h2 class="text-2xl font-bold text-black">Send a Message</h2>
                     <p class="mt-2 text-sm text-gray-600">Contact form coming soon.</p>
                 </div>
