@@ -22,6 +22,7 @@
                         <span class="block px-4 py-2 text-sm text-gray-400">Adult <span class="text-xs">(Coming Soon)</span></span>
                         <a href="{{ route('ministries.worship-music') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Worship & Music</a>
                         <span class="block px-4 py-2 text-sm text-gray-400">Missions/Outreach <span class="text-xs">(Coming Soon)</span></span>
+                        <span class="block px-4 py-2 text-sm text-gray-400">Organizations <span class="text-xs">(Coming Soon)</span></span>
                     </div>
                 </div>
 
@@ -85,6 +86,7 @@
                     <span class="block px-3 py-2 text-sm text-gray-400">Adult (Coming Soon)</span>
                     <a href="{{ route('ministries.worship-music') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Worship & Music</a>
                     <span class="block px-3 py-2 text-sm text-gray-400">Missions/Outreach (Coming Soon)</span>
+                    <span class="block px-3 py-2 text-sm text-gray-400">Organizations (Coming Soon)</span>
                 </div>
             </div>
 

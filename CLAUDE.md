@@ -190,28 +190,68 @@ This project uses **bun** (not npm). All frontend commands use bun:
 - **Light gray:** `#EAEAEA` — Tailwind: `light-gray`
 - **Black & white** for structure and text
 
-Use red for primary CTAs and active states. Use teal for secondary actions, informational highlights, and variety. These are defined as custom theme colors in `resources/css/app.css`.
+Use red for primary CTAs, nav active states, and nav hover states. Use teal for section headings, eyebrow labels, decorative dividers, and informational highlights. Alternate red/teal accents across sections for visual variety. These are defined as custom theme colors in `resources/css/app.css`.
+
+## Fonts
+
+- **Primary:** Instrument Sans (sans-serif) — body text, headings, UI
+- **Display:** Playfair Display (serif) — used sparingly for decorative headings (e.g., "Worship With Us"). Tailwind class: `font-display`
+- Both loaded from Bunny Fonts (not Google Fonts)
+
+## Design Conventions
+
+- **Section headings** follow a consistent pattern: teal eyebrow (small uppercase tracking-wider), bold heading, teal divider line (`w-24 border-t-4 border-teal`)
+- **Alternating section backgrounds:** Use `bg-teal/5` and white to alternate between sections. No two sequential sections should share the same background color.
+- **Border radius:** Keep border radii conservative — prefer `rounded-md` for cards/containers, `rounded` for buttons and small elements. Avoid `rounded-xl` or larger.
+- **Footer cards:** Use `border border-white/10 bg-white/5` for card-style containers on dark backgrounds
+- **Image cards (ministries, etc.):** Full-bleed image with gradient overlay (`bg-gradient-to-t from-black/70 via-black/30 to-transparent`) and white text at the bottom
+- **Coming soon items:** Grayscale images with heavier overlay, muted text, no hover effects, no link
+
+## File Storage
+
+- Static assets (images, SVGs) are stored in Cloudflare R2 and accessed via `Storage::disk('r2')->url('filename')`
+- Use R2 for all uploaded/managed media, `public/` for build artifacts and favicons only
 
 ## Site Structure
 
 The site uses Blade component layouts (`resources/views/components/layouts/app.blade.php`) with reusable components for nav, footer, and page heroes. Pages live in `resources/views/pages/` organized by section.
 
+### Home Page
+
+Home page sections are anonymous Blade components in `resources/views/components/home/`. Each section is its own component file:
+- `hero.blade.php` — full-height photo hero with overlay
+- `info-bar.blade.php` — teal bar with service times and address
+- `welcome.blade.php` — pastor welcome with photo
+- `ministries.blade.php` — ministry cards grid
+- `upcoming-events.blade.php` — event cards
+- `latest-video.blade.php` — class-based component that fetches latest Vimeo video via RSS (cached 12h)
+- `cta.blade.php` — call-to-action with embedded Google Map
+
+### Content Pages
+
+Content pages (e.g., Children's Ministry) use:
+- `<x-page-hero>` with title and optional subtitle/intro paragraph (teal gradient background)
+- Alternating left-right image/text blocks for program sections
+- Alternate `bg-teal/5` and white backgrounds per section
+- Alternate teal and red accent colors (eyebrow, divider) per section
+
 ### Routes & Pages
 
 All routes use `Route::view()` with named routes. Sections:
 - **Home** — `/`
-- **Ministries** — `/ministries/{children,worship-music,clark-weekday-center,upcoming-events}`
+- **Ministries** — `/ministries/{children,worship-music,upcoming-events}`
 - **About** — `/about/{our-team,what-we-believe,history}`
 - **Being the Church** — `/being-the-church`
 - **Resources** — `/resources/{the-happenings,untimely-ramblings,videos,video-archive}`
-- **Clark Weekday** — `/clark-weekday`
+- **Clark Weekday** — `/clark-weekday` (top-level nav item, not nested under Ministries)
 - **Contact** — `/contact`
 
-"Coming Soon" items (Student, Adult, Missions/Outreach ministries) are shown as disabled in the nav but have no routes yet.
+"Coming Soon" items (Student, Adult, Missions/Outreach, Organizations) are shown as disabled in the Ministries nav dropdown but have no routes yet.
 
 ## Layout & Components
 
 - `@livewireStyles` and `@livewireScripts` are explicitly included in the layout (required since pages don't all contain Livewire components, and auto-injection only fires when components are present)
 - Alpine.js is bundled with Livewire — no separate install needed
 - Nav uses Alpine.js for dropdown menus (hover on desktop, accordion on mobile)
-- `<x-page-hero>` component for consistent page headers
+- `<x-page-hero>` component for consistent page headers (accepts `title` and optional `subtitle` props)
+- Footer uses `bg-neutral-900` (charcoal, not blue-gray) with `border-neutral-700` dividers

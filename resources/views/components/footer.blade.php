@@ -57,7 +57,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" class="size-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" /></svg>
                     Address
                 </p>
-                <p class="mt-2 text-base font-medium text-white">420 East Ninth Street</p>
+                <p class="mt-2 text-base font-medium text-white">420 East 9th St.</p>
                 <p class="text-base font-medium text-white">Texarkana, AR 71854</p>
             </a>
             <div class="rounded-md border border-white/10 bg-white/5 px-6 py-5">
