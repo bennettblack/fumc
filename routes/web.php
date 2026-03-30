@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Organization;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'pages.home')->name('home');
@@ -8,6 +9,7 @@ Route::view('/', 'pages.home')->name('home');
 Route::view('/ministries/children', 'pages.ministries.children')->name('ministries.children');
 Route::view('/ministries/worship-music', 'pages.ministries.worship-music')->name('ministries.worship-music');
 Route::view('/ministries/upcoming-events', 'pages.ministries.upcoming-events')->name('ministries.upcoming-events');
+Route::get('/ministries/organizations', fn () => view('pages.ministries.organizations', ['organizations' => Organization::all()]))->name('ministries.organizations');
 
 // About
 Route::view('/about/our-team', 'pages.about.our-team')->name('about.our-team');

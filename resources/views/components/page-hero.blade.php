@@ -7,5 +7,6 @@
         @if($subtitle)
             <p class="mx-auto mt-4 max-w-3xl text-base leading-7 text-white/80">{{ $subtitle }}</p>
         @endif
+        {{ $slot }}
     </div>
 </section>
