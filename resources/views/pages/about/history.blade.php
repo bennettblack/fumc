@@ -13,7 +13,7 @@
                     <p class="mt-2 text-xs italic text-gray-400">Written in the early 1900s</p>
 
                     <figure class="mt-8">
-                        <img src="https://placehold.co/240x300/e5e7eb/9ca3af?text=Rev.+James+Thomas" alt="Rev. James Thomas" class="h-auto w-40 rounded-md object-cover sm:w-48">
+                        <img src="{{ Storage::disk('r2')->url('james_thomas.png') }}" alt="Rev. James Thomas" class="h-auto w-40 rounded-md object-cover sm:w-48">
                         <figcaption class="mt-2 text-xs italic text-gray-400">Rev. James Thomas</figcaption>
                     </figure>
 
