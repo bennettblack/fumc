@@ -1,5 +1,5 @@
 <x-layouts.app title="Contact Us">
-    <x-page-hero title="Contact Us" subtitle="We'd love to hear from you" />
+    <x-page-hero title="Contact Us" subtitle="Thanks for visiting our website. If you need more information or have any other requests, please fill out the following form so we can be in touch with you!" />
 
     <section class="py-16 sm:py-20">
         <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
