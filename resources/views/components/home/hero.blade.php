@@ -1,4 +1,4 @@
-<section class="relative h-[650px] overflow-hidden">
+<section class="relative h-[400px] sm:h-[550px] lg:h-[650px] overflow-hidden">
     <img src="{{ Storage::disk('r2')->url('church_ii.jpg') }}" alt="First United Methodist Church" class="absolute inset-0 h-full w-full object-cover object-center">
     <div class="absolute inset-0 bg-black/50"></div>
     <div class="relative flex h-full items-center justify-center">

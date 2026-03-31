@@ -10,7 +10,7 @@
                     @foreach($organizations as $organization)
                         <div class="group overflow-hidden rounded-md bg-white shadow-sm ring-1 ring-black/5 transition-shadow hover:shadow-md">
                             @if($organization->image)
-                                <img src="{{ Storage::disk('r2')->url($organization->image) }}" alt="{{ $organization->name }}" class="h-48 w-full object-cover">
+                                <img src="{{ Storage::disk('r2')->url($organization->image) }}" alt="{{ $organization->name }}" class="h-36 w-full object-cover sm:h-48">
                             @else
                                 <div class="flex h-2 {{ $loop->iteration % 2 === 1 ? 'bg-teal' : 'bg-red' }}"></div>
                             @endif

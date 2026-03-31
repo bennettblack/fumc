@@ -8,36 +8,39 @@
 
         <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {{-- Placeholder event cards — replace with dynamic content --}}
-            <div class="overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-black/5">
-                <div class="bg-red px-6 py-3">
-                    <p class="text-sm font-bold text-white">Sunday, April 6</p>
+            <div class="group flex gap-5 rounded-md border border-gray-200 bg-white p-5 transition-shadow hover:shadow-md">
+                <div class="shrink-0 text-center">
+                    <p class="text-3xl font-bold leading-none text-red">6</p>
+                    <p class="mt-1 text-xs font-semibold uppercase tracking-wider text-gray-500">Apr</p>
                 </div>
-                <div class="p-6">
-                    <h3 class="text-lg font-semibold text-black">Palm Sunday Service</h3>
-                    <p class="mt-1 text-sm text-gray-500">10:30 AM</p>
-                    <p class="mt-3 text-sm leading-relaxed text-gray-600">Join us as we celebrate Jesus' triumphal entry into Jerusalem with a special worship service.</p>
-                </div>
-            </div>
-
-            <div class="overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-black/5">
-                <div class="bg-teal px-6 py-3">
-                    <p class="text-sm font-bold text-white">Thursday, April 10</p>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-lg font-semibold text-black">Maundy Thursday</h3>
-                    <p class="mt-1 text-sm text-gray-500">6:00 PM</p>
-                    <p class="mt-3 text-sm leading-relaxed text-gray-600">A reflective evening service commemorating the Last Supper with communion.</p>
+                <div>
+                    <h3 class="text-base font-bold text-black">Palm Sunday Service</h3>
+                    <p class="mt-0.5 text-sm font-medium text-teal">10:30 AM</p>
+                    <p class="mt-2 text-sm leading-relaxed text-gray-600">Join us as we celebrate Jesus' triumphal entry into Jerusalem with a special worship service.</p>
                 </div>
             </div>
 
-            <div class="overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-black/5">
-                <div class="bg-red px-6 py-3">
-                    <p class="text-sm font-bold text-white">Sunday, April 13</p>
+            <div class="group flex gap-5 rounded-md border border-gray-200 bg-white p-5 transition-shadow hover:shadow-md">
+                <div class="shrink-0 text-center">
+                    <p class="text-3xl font-bold leading-none text-red">10</p>
+                    <p class="mt-1 text-xs font-semibold uppercase tracking-wider text-gray-500">Apr</p>
                 </div>
-                <div class="p-6">
-                    <h3 class="text-lg font-semibold text-black">Easter Sunday</h3>
-                    <p class="mt-1 text-sm text-gray-500">10:30 AM</p>
-                    <p class="mt-3 text-sm leading-relaxed text-gray-600">Celebrate the resurrection of Christ with our Easter worship celebration.</p>
+                <div>
+                    <h3 class="text-base font-bold text-black">Maundy Thursday</h3>
+                    <p class="mt-0.5 text-sm font-medium text-teal">6:00 PM</p>
+                    <p class="mt-2 text-sm leading-relaxed text-gray-600">A reflective evening service commemorating the Last Supper with communion.</p>
+                </div>
+            </div>
+
+            <div class="group flex gap-5 rounded-md border border-gray-200 bg-white p-5 transition-shadow hover:shadow-md">
+                <div class="shrink-0 text-center">
+                    <p class="text-3xl font-bold leading-none text-red">13</p>
+                    <p class="mt-1 text-xs font-semibold uppercase tracking-wider text-gray-500">Apr</p>
+                </div>
+                <div>
+                    <h3 class="text-base font-bold text-black">Easter Sunday</h3>
+                    <p class="mt-0.5 text-sm font-medium text-teal">10:30 AM</p>
+                    <p class="mt-2 text-sm leading-relaxed text-gray-600">Celebrate the resurrection of Christ with our Easter worship celebration.</p>
                 </div>
             </div>
         </div>

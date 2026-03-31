@@ -8,7 +8,7 @@
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
                     <div class="relative">
-                        <div class="absolute -bottom-4 -right-4 aspect-4/3 w-full rounded-md bg-teal/20"></div>
+                        <div class="absolute -bottom-4 -right-4 hidden aspect-4/3 w-full rounded-md sm:block bg-teal/20"></div>
                         <div class="relative overflow-hidden rounded-md shadow-lg">
                             <img src="{{ Storage::disk('r2')->url('nursery.jpeg') }}" alt="Nursery" class="aspect-4/3 w-full object-cover">
                         </div>
@@ -34,7 +34,7 @@
                         <p class="mt-4 text-base leading-7 text-gray-600">Sunday School - Two year olds are welcomed with songs, snacks, and hands on Bible stories. Each child takes home a Bible story page to enjoy with parents during the week.</p>
                     </div>
                     <div class="relative order-1 lg:order-2">
-                        <div class="absolute -bottom-4 -left-4 aspect-4/3 w-full rounded-md bg-red/20"></div>
+                        <div class="absolute -bottom-4 -left-4 hidden aspect-4/3 w-full rounded-md sm:block bg-red/20"></div>
                         <div class="relative overflow-hidden rounded-md shadow-lg">
                             <img src="{{ Storage::disk('r2')->url('kid_venture.jpeg') }}" alt="Two Year Kid Venture Class" class="aspect-4/3 w-full object-cover">
                         </div>
@@ -48,7 +48,7 @@
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
                     <div class="relative">
-                        <div class="absolute -bottom-4 -right-4 aspect-4/3 w-full rounded-md bg-teal/20"></div>
+                        <div class="absolute -bottom-4 -right-4 hidden aspect-4/3 w-full rounded-md sm:block bg-teal/20"></div>
                         <div class="relative overflow-hidden rounded-md shadow-lg">
                             <img src="{{ Storage::disk('r2')->url('deep_blue.jpeg') }}" alt="Deep Blue Sunday School" class="aspect-4/3 w-full object-cover">
                         </div>
@@ -85,7 +85,7 @@
                         <p class="mt-3 text-base font-semibold leading-7 text-gray-800">Come join us!</p>
                     </div>
                     <div class="relative order-1 lg:order-2">
-                        <div class="absolute -bottom-4 -left-4 aspect-4/3 w-full rounded-md bg-red/20"></div>
+                        <div class="absolute -bottom-4 -left-4 hidden aspect-4/3 w-full rounded-md sm:block bg-red/20"></div>
                         <div class="relative overflow-hidden rounded-md shadow-lg">
                             <img src="{{ Storage::disk('r2')->url('cross_walk.jpeg') }}" alt="Cross Walk Sunday School" class="aspect-4/3 w-full object-cover">
                         </div>
@@ -99,7 +99,7 @@
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
                     <div class="relative">
-                        <div class="absolute -bottom-4 -right-4 aspect-4/3 w-full rounded-md bg-teal/20"></div>
+                        <div class="absolute -bottom-4 -right-4 hidden aspect-4/3 w-full rounded-md sm:block bg-teal/20"></div>
                         <div class="relative overflow-hidden rounded-md shadow-lg">
                             <img src="{{ Storage::disk('r2')->url('kidz_church.jpeg') }}" alt="Kidz Church" class="aspect-4/3 w-full object-cover">
                         </div>
@@ -128,7 +128,7 @@
                         <p class="mt-3 text-sm text-gray-500">Questions? Contact Cheryl Dodson at <a href="tel:8707726931" class="font-medium text-red hover:underline">(870) 772-6931 ext. 130</a> or <a href="mailto:Cheryl@Bethechurch.email" class="font-medium text-red hover:underline">Cheryl@Bethechurch.email</a></p>
                     </div>
                     <div class="relative order-1 lg:order-2">
-                        <div class="absolute -bottom-4 -left-4 aspect-4/3 w-full rounded-md bg-red/20"></div>
+                        <div class="absolute -bottom-4 -left-4 hidden aspect-4/3 w-full rounded-md sm:block bg-red/20"></div>
                         <div class="relative overflow-hidden rounded-md shadow-lg">
                             <img src="{{ Storage::disk('r2')->url('power_pak.jpeg') }}" alt="Power Pak" class="aspect-4/3 w-full object-cover">
                         </div>
@@ -142,7 +142,7 @@
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
                     <div class="relative">
-                        <div class="absolute -bottom-4 -right-4 aspect-4/3 w-full rounded-md bg-teal/20"></div>
+                        <div class="absolute -bottom-4 -right-4 hidden aspect-4/3 w-full rounded-md sm:block bg-teal/20"></div>
                         <div class="relative overflow-hidden rounded-md shadow-lg">
                             <img src="{{ Storage::disk('r2')->url('special_events.jpeg') }}" alt="Special Events" class="aspect-4/3 w-full object-cover">
                         </div>

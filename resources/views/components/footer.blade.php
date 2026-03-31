@@ -1,7 +1,7 @@
 <footer class="bg-neutral-900 text-white">
     <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         {{-- Top row: Logo + Links --}}
-        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {{-- Church Identity --}}
             <div>
                 <img src="{{ Storage::disk('r2')->url('cross-and-flame-footer.svg') }}" alt="FUMC" class="h-24 w-auto">

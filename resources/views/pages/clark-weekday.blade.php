@@ -1,7 +1,7 @@
 <x-layouts.app title="Clark Weekday">
     {{-- Hero with large image --}}
     <section class="relative">
-        <div class="aspect-[21/9] w-full overflow-hidden sm:aspect-[3/1]">
+        <div class="aspect-[16/9] w-full overflow-hidden sm:aspect-[21/9] lg:aspect-[3/1]">
             <img src="https://placehold.co/1920x640/e5e7eb/9ca3af?text=Clark+Weekday" alt="Clark Weekday" class="h-full w-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
         </div>
@@ -129,7 +129,7 @@
                         <input type="text" id="city_state_zip" name="city_state_zip" required class="mt-1 block w-full rounded border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-teal focus:ring-1 focus:ring-teal focus:outline-none">
                     </div>
 
-                    <div class="grid grid-cols-1 gap-5 sm:grid-cols-3">
+                    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
                         <div>
                             <label for="phone" class="block text-sm font-medium text-gray-700">Phone <span class="text-xs font-normal text-gray-400">(optional)</span></label>
                             <input type="tel" id="phone" name="phone" class="mt-1 block w-full rounded border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-teal focus:ring-1 focus:ring-teal focus:outline-none">
