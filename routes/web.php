@@ -25,4 +25,3 @@ Route::view('/contact', 'pages.contact')->name('contact');
 Route::view('/resources/the-happenings', 'pages.resources.the-happenings')->name('resources.the-happenings');
 Route::view('/resources/untimely-ramblings', 'pages.resources.untimely-ramblings')->name('resources.untimely-ramblings');
 Route::view('/resources/videos', 'pages.resources.videos')->name('resources.videos');
-Route::view('/resources/video-archive', 'pages.resources.video-archive')->name('resources.video-archive');

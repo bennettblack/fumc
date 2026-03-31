@@ -51,7 +51,6 @@
                         <a href="{{ route('resources.the-happenings') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">The Happenings</a>
                         <a href="{{ route('resources.untimely-ramblings') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Untimely Ramblings</a>
                         <a href="{{ route('resources.videos') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Videos</a>
-                        <a href="{{ route('resources.video-archive') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Video Archive</a>
                         <a href="{{ route('ministries.upcoming-events') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Upcoming Events</a>
                     </div>
                 </div>
@@ -115,7 +114,6 @@
                     <a href="{{ route('resources.the-happenings') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">The Happenings</a>
                     <a href="{{ route('resources.untimely-ramblings') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Untimely Ramblings</a>
                     <a href="{{ route('resources.videos') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Videos</a>
-                    <a href="{{ route('resources.video-archive') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Video Archive</a>
                     <a href="{{ route('ministries.upcoming-events') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Upcoming Events</a>
                 </div>
             </div>
