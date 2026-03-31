@@ -24,7 +24,7 @@
                                         <p class="mt-1 text-xs font-semibold uppercase tracking-wider {{ $loop->iteration % 2 === 1 ? 'text-teal' : 'text-red' }}">{{ $organization->contact }}</p>
                                     </div>
                                 </div>
-                                <p class="mt-4 text-sm leading-relaxed text-gray-600">{{ $organization->description }}</p>
+                                <div class="mt-4 prose prose-sm text-gray-600">{!! $organization->description !!}</div>
                             </div>
                         </div>
                     @endforeach

@@ -10,6 +10,7 @@ class EditOrganization extends EditRecord
 {
     protected static string $resource = OrganizationResource::class;
 
+
     protected function getHeaderActions(): array
     {
         return [
