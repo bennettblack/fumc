@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Organization;
+use App\Models\TeamMember;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'pages.home')->name('home');
@@ -12,8 +13,7 @@ Route::view('/ministries/upcoming-events', 'pages.ministries.upcoming-events')->
 Route::get('/ministries/organizations', fn () => view('pages.ministries.organizations', ['organizations' => Organization::all()]))->name('ministries.organizations');
 
 // About
-Route::view('/about/our-team', 'pages.about.our-team')->name('about.our-team');
-Route::view('/about/what-we-believe', 'pages.about.what-we-believe')->name('about.what-we-believe');
+Route::get('/about/our-team', fn () => view('pages.about.our-team', ['team' => TeamMember::orderBy('sort_order')->get()]))->name('about.our-team');
 Route::view('/about/history', 'pages.about.history')->name('about.history');
 
 // Standalone pages

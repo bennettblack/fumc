@@ -34,7 +34,7 @@
                     </button>
                     <div x-show="open" x-transition.opacity class="absolute left-0 top-full mt-0 w-48 rounded bg-white py-2 shadow-lg ring-1 ring-black/5">
                         <a href="{{ route('about.our-team') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Our Team</a>
-                        <a href="{{ route('about.what-we-believe') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">What We Believe</a>
+                        <a href="https://www.umc.org/en/who-we-are/what-we-believe" target="_blank" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">What We Believe</a>
                         <a href="{{ route('about.history') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">History</a>
                     </div>
                 </div>
@@ -98,7 +98,7 @@
                 </button>
                 <div x-show="open" x-collapse class="ml-4 space-y-1">
                     <a href="{{ route('about.our-team') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Our Team</a>
-                    <a href="{{ route('about.what-we-believe') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">What We Believe</a>
+                    <a href="https://www.umc.org/en/who-we-are/what-we-believe" target="_blank" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">What We Believe</a>
                     <a href="{{ route('about.history') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">History</a>
                 </div>
             </div>

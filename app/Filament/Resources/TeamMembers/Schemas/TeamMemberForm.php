@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Resources\Organizations\Schemas;
+namespace App\Filament\Resources\TeamMembers\Schemas;
 
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
@@ -12,21 +12,24 @@ use Illuminate\Support\Str;
 use Intervention\Image\Laravel\Facades\Image;
 use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
 
-class OrganizationForm
+class TeamMemberForm
 {
     public static function configure(Schema $schema): Schema
     {
         return $schema
             ->columns(12)
             ->components([
-                Section::make('Organization')
+                Section::make('Details')
                     ->columnSpan(8)
                     ->schema([
                         TextInput::make('name')
                             ->required()
                             ->maxLength(255),
-                        RichEditor::make('description')
+                        TextInput::make('title')
                             ->required()
+                            ->maxLength(255)
+                            ->helperText('e.g. Senior Pastor, Director of Music'),
+                        RichEditor::make('description')
                             ->toolbarButtons([
                                 'bold',
                                 'italic',
@@ -34,16 +37,24 @@ class OrganizationForm
                                 'bulletList',
                                 'orderedList',
                             ]),
+                        TextInput::make('sort_order')
+                            ->numeric()
+                            ->default(0)
+                            ->helperText('Lower numbers appear first.'),
+                    ]),
+                Section::make('Photo')
+                    ->columnSpan(4)
+                    ->schema([
                         FileUpload::make('image')
                             ->image()
-                            ->imageAspectRatio('4:3')
+                            ->imageAspectRatio('3:4')
                             ->automaticallyCropImagesToAspectRatio()
                             ->automaticallyResizeImagesMode('cover')
-                            ->automaticallyResizeImagesToWidth('800')
-                            ->automaticallyResizeImagesToHeight('600')
+                            ->automaticallyResizeImagesToWidth('600')
+                            ->automaticallyResizeImagesToHeight('800')
                             ->imageEditor()
                             ->saveUploadedFileUsing(function (TemporaryUploadedFile $file): string {
-                                $filename = 'organizations/'.Str::ulid().'.webp';
+                                $filename = 'team/'.Str::ulid().'.webp';
 
                                 $webp = Image::read($file->getRealPath())
                                     ->toWebp(80);
@@ -52,15 +63,7 @@ class OrganizationForm
 
                                 return $filename;
                             })
-                            ->helperText('Will be cropped to 4:3 and converted to WebP.'),
-                    ]),
-                Section::make('Contact')
-                    ->columnSpan(4)
-                    ->schema([
-                        TextInput::make('contact')
-                            ->required()
-                            ->maxLength(255)
-                            ->helperText('e.g. Jane Doe — (870) 772-6931'),
+                            ->helperText('Portrait orientation (3:4). Converted to WebP.'),
                     ]),
             ]);
     }

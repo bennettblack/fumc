@@ -14,7 +14,7 @@
                 <h4 class="text-sm font-semibold uppercase tracking-wider text-teal">Quick Links</h4>
                 <ul class="mt-4 space-y-2">
                     <li><a href="{{ route('about.our-team') }}" class="text-sm text-gray-300 hover:text-red transition-colors">Our Team</a></li>
-                    <li><a href="{{ route('about.what-we-believe') }}" class="text-sm text-gray-300 hover:text-red transition-colors">What We Believe</a></li>
+                    <li><a href="https://www.umc.org/en/who-we-are/what-we-believe" target="_blank" class="text-sm text-gray-300 hover:text-red transition-colors">What We Believe</a></li>
                     <li><a href="{{ route('ministries.upcoming-events') }}" class="text-sm text-gray-300 hover:text-red transition-colors">Upcoming Events</a></li>
                     <li><a href="{{ route('contact') }}" class="text-sm text-gray-300 hover:text-red transition-colors">Contact Us</a></li>
                 </ul>
