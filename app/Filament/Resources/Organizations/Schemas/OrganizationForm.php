@@ -9,6 +9,7 @@ use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Intervention\Image\Encoders\WebpEncoder;
 use Intervention\Image\Laravel\Facades\Image;
 use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
 
@@ -45,8 +46,8 @@ class OrganizationForm
                             ->saveUploadedFileUsing(function (TemporaryUploadedFile $file): string {
                                 $filename = 'organizations/'.Str::ulid().'.webp';
 
-                                $webp = Image::read($file->getRealPath())
-                                    ->toWebp(80);
+                                $webp = Image::decode($file->getRealPath())
+                                    ->encode(new WebpEncoder(80));
 
                                 Storage::disk('r2')->put($filename, (string) $webp);
 
