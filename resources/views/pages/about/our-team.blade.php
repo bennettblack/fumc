@@ -11,8 +11,9 @@
                 <section class="{{ $loop->even ? 'bg-teal/5' : 'bg-white' }}">
                     <div class="mx-auto max-w-5xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
                         <div class="flex flex-col items-center gap-8 sm:gap-12 {{ $loop->even ? 'sm:flex-row-reverse' : 'sm:flex-row' }}">
-                            <div class="shrink-0">
-                                <div class="aspect-[3/4] w-56 overflow-hidden rounded-md sm:w-64">
+                            <div class="relative shrink-0">
+                                <div class="absolute -bottom-3 {{ $loop->even ? '-left-3' : '-right-3' }} hidden aspect-[3/4] w-56 rounded-md bg-gray-200 sm:block sm:w-64"></div>
+                                <div class="relative aspect-[3/4] w-56 overflow-hidden rounded-md sm:w-64">
                                     @if($member->image)
                                         <img src="{{ Storage::disk('r2')->url($member->image) }}" alt="{{ $member->name }}" class="h-full w-full object-cover">
                                     @else
