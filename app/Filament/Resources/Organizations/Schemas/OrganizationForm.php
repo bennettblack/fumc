@@ -36,6 +36,9 @@ class OrganizationForm
                                 'orderedList',
                             ]),
                         FileUpload::make('image')
+                            ->disk('r2')
+                            ->directory('organizations')
+                            ->visibility('public')
                             ->image()
                             ->imageAspectRatio('4:3')
                             ->automaticallyCropImagesToAspectRatio()

@@ -47,6 +47,9 @@ class TeamMemberForm
                     ->columnSpan(4)
                     ->schema([
                         FileUpload::make('image')
+                            ->disk('r2')
+                            ->directory('team')
+                            ->visibility('public')
                             ->image()
                             ->imageAspectRatio('3:4')
                             ->automaticallyCropImagesToAspectRatio()
