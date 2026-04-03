@@ -17,12 +17,12 @@
                         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
                     </button>
                     <div x-show="open" x-transition.opacity class="absolute left-0 top-full mt-0 w-56 rounded bg-white py-2 shadow-lg ring-1 ring-black/5">
-                        <a href="{{ route('ministries.children') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Children</a>
-                        <span class="block px-4 py-2 text-sm text-gray-400">Student <span class="text-xs">(Coming Soon)</span></span>
                         <span class="block px-4 py-2 text-sm text-gray-400">Adult <span class="text-xs">(Coming Soon)</span></span>
-                        <a href="{{ route('ministries.worship-music') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Worship & Music</a>
+                        <a href="{{ route('ministries.children') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Children</a>
                         <span class="block px-4 py-2 text-sm text-gray-400">Missions/Outreach <span class="text-xs">(Coming Soon)</span></span>
                         <a href="{{ route('ministries.organizations') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Organizations</a>
+                        <span class="block px-4 py-2 text-sm text-gray-400">Student <span class="text-xs">(Coming Soon)</span></span>
+                        <a href="{{ route('ministries.worship-music') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Worship & Music</a>
                     </div>
                 </div>
 
@@ -33,9 +33,9 @@
                         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
                     </button>
                     <div x-show="open" x-transition.opacity class="absolute left-0 top-full mt-0 w-48 rounded bg-white py-2 shadow-lg ring-1 ring-black/5">
+                        <a href="{{ route('about.history') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">History</a>
                         <a href="{{ route('about.our-team') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Our Team</a>
                         <a href="https://www.umc.org/en/who-we-are/what-we-believe" target="_blank" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">What We Believe</a>
-                        <a href="{{ route('about.history') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">History</a>
                     </div>
                 </div>
 
@@ -49,9 +49,10 @@
                     </button>
                     <div x-show="open" x-transition.opacity class="absolute left-0 top-full mt-0 w-48 rounded bg-white py-2 shadow-lg ring-1 ring-black/5">
                         <a href="{{ route('resources.the-happenings') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">The Happenings</a>
+                        <a href="{{ route('ministries.upcoming-events') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Upcoming Events</a>
                         <a href="{{ route('resources.untimely-ramblings') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Untimely Ramblings</a>
                         <a href="{{ route('resources.videos') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Videos</a>
-                        <a href="{{ route('ministries.upcoming-events') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Upcoming Events</a>
+                        <a href="{{ route('resources.weekly-bulletin') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Weekly Bulletin</a>
                     </div>
                 </div>
 
@@ -80,12 +81,12 @@
                     <svg :class="open && 'rotate-180'" class="h-4 w-4 transition-transform" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
                 </button>
                 <div x-show="open" x-collapse class="ml-4 space-y-1">
-                    <a href="{{ route('ministries.children') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Children</a>
-                    <span class="block px-3 py-2 text-sm text-gray-400">Student (Coming Soon)</span>
                     <span class="block px-3 py-2 text-sm text-gray-400">Adult (Coming Soon)</span>
-                    <a href="{{ route('ministries.worship-music') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Worship & Music</a>
+                    <a href="{{ route('ministries.children') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Children</a>
                     <span class="block px-3 py-2 text-sm text-gray-400">Missions/Outreach (Coming Soon)</span>
                     <a href="{{ route('ministries.organizations') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Organizations</a>
+                    <span class="block px-3 py-2 text-sm text-gray-400">Student (Coming Soon)</span>
+                    <a href="{{ route('ministries.worship-music') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Worship & Music</a>
                 </div>
             </div>
 
@@ -96,9 +97,9 @@
                     <svg :class="open && 'rotate-180'" class="h-4 w-4 transition-transform" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
                 </button>
                 <div x-show="open" x-collapse class="ml-4 space-y-1">
+                    <a href="{{ route('about.history') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">History</a>
                     <a href="{{ route('about.our-team') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Our Team</a>
                     <a href="https://www.umc.org/en/who-we-are/what-we-believe" target="_blank" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">What We Believe</a>
-                    <a href="{{ route('about.history') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">History</a>
                 </div>
             </div>
 
@@ -112,9 +113,10 @@
                 </button>
                 <div x-show="open" x-collapse class="ml-4 space-y-1">
                     <a href="{{ route('resources.the-happenings') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">The Happenings</a>
+                    <a href="{{ route('ministries.upcoming-events') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Upcoming Events</a>
                     <a href="{{ route('resources.untimely-ramblings') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Untimely Ramblings</a>
                     <a href="{{ route('resources.videos') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Videos</a>
-                    <a href="{{ route('ministries.upcoming-events') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Upcoming Events</a>
+                    <a href="{{ route('resources.weekly-bulletin') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Weekly Bulletin</a>
                 </div>
             </div>
 

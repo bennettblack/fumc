@@ -7,7 +7,7 @@
             <div class="mx-auto mt-6 w-24 border-t-4 border-teal"></div>
             <p class="mt-6 text-xl font-light text-gray-200 sm:text-2xl">Serve Joyfully. Offering care and compassion to all.</p>
             <div class="mt-10 flex items-center justify-center gap-4">
-                <a href="#" class="rounded bg-red px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-red-dark">Weekly Bulletin</a>
+                <a href="{{ route('resources.weekly-bulletin') }}" class="rounded bg-red px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-red-dark">Weekly Bulletin</a>
                 <a href="{{ route('ministries.upcoming-events') }}" class="rounded border border-white px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-black">Upcoming Events</a>
             </div>
         </div>
