@@ -21,9 +21,34 @@
             <h2 class="mt-1 text-2xl font-bold text-black">Info &amp; Reminders</h2>
             <div class="mt-3 w-16 border-t-4 border-red"></div>
 
-            <div class="prose prose-gray mt-8 max-w-none">
-                <p>Program information and reminders coming soon.</p>
-            </div>
+            <p class="mt-8 max-w-3xl text-gray-600">Please feel free to discuss with the director or your child's teacher anything that will help us understand your child better. The following is a list of helpful hints and important reminders that will help make each day a positive experience for your child.</p>
+
+            <ul class="mt-6 max-w-3xl space-y-3">
+                <li class="flex gap-3 text-gray-700">
+                    <span class="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-teal"></span>
+                    Arrive by 8:30 each morning. This allows children the full benefit of learning and participating in the lessons and activities prepared for each class.
+                </li>
+                <li class="flex gap-3 text-gray-700">
+                    <span class="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-teal"></span>
+                    Allow ample preparation time each morning so that your child will not be hurried.
+                </li>
+                <li class="flex gap-3 text-gray-700">
+                    <span class="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-teal"></span>
+                    Be sure your child eats breakfast prior to arriving each morning.
+                </li>
+                <li class="flex gap-3 text-gray-700">
+                    <span class="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-teal"></span>
+                    Eagerly look at things your child brings home, and proudly display his/her creations in a prominent place.
+                </li>
+                <li class="flex gap-3 text-gray-700">
+                    <span class="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-teal"></span>
+                    Mark your child's coat, cap, sweater, lunch kit, cups, blankets, diaper bag, or any other item your child may bring.
+                </li>
+                <li class="flex gap-3 text-gray-700">
+                    <span class="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-teal"></span>
+                    Talk with your child about his/her teacher, the other boys and girls, and events of their day.
+                </li>
+            </ul>
         </div>
     </section>
 
