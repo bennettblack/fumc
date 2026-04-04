@@ -2,14 +2,14 @@
     {{-- Hero with large image --}}
     <section class="relative">
         <div class="aspect-[16/9] w-full overflow-hidden sm:aspect-[21/9] lg:aspect-[3/1]">
-            <img src="https://placehold.co/1920x640/e5e7eb/9ca3af?text=Clark+Weekday" alt="Clark Weekday" class="h-full w-full object-cover">
+            <img src="{{ Storage::disk('r2')->url('clark_i.jpg') }}" alt="Clark Weekday" class="h-full w-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
         </div>
         <div class="absolute inset-0 flex items-end">
             <div class="mx-auto w-full max-w-7xl px-4 pb-10 sm:px-6 sm:pb-14 lg:px-8">
                 <p class="text-sm font-semibold uppercase tracking-wider text-red">First United Methodist Church</p>
                 <h1 class="mt-1 text-3xl font-bold text-white sm:text-4xl lg:text-5xl">Clark Weekday</h1>
-                <p class="mt-3 max-w-2xl text-base text-gray-200 sm:text-lg">Providing quality childcare and early education in a nurturing, faith-centered environment for families in our community.</p>
+                <p class="mt-3 max-w-2xl text-base text-gray-200 sm:text-lg">The Clark Weekday Program "Clark", is dedicated to providing quality care in a loving and educational environment. Your child is very important to us at the First United Methodist Church. We want children to have nurturing, happy experiences while in our care. We will provide a safe, secure, and stimulating environment so they can learn and develop in their own special ways.</p>
             </div>
         </div>
     </section>
@@ -59,15 +59,16 @@
     {{-- Video --}}
     <section class="py-14 sm:py-20">
         <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <p class="text-sm font-semibold uppercase tracking-wider text-red">See It in Action</p>
-                <h2 class="mt-1 text-2xl font-bold text-black">Clark Weekday Video</h2>
-                <div class="mx-auto mt-3 w-16 border-t-4 border-red"></div>
-            </div>
+            <div class="rounded-md border border-gray-200 bg-neutral-50 p-6 sm:p-8">
+                <div class="text-center">
+                    <p class="text-sm font-semibold uppercase tracking-wider text-red">See It in Action</p>
+                    <h2 class="mt-1 text-2xl font-bold text-black">Clark Weekday Video</h2>
+                    <div class="mx-auto mt-3 w-16 border-t-4 border-red"></div>
+                </div>
 
-            <div class="mt-8 aspect-video w-full overflow-hidden rounded-md shadow-lg">
-                {{-- Replace src with actual video embed URL --}}
-                <iframe src="about:blank" class="h-full w-full" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                <div class="mt-8 aspect-video w-full overflow-hidden rounded-md shadow-lg">
+                    <iframe title="vimeo-player" src="https://player.vimeo.com/video/338319560?h=436cfdfbbd" class="h-full w-full" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
     </section>
