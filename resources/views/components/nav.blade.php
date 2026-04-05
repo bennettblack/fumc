@@ -48,6 +48,7 @@
                         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
                     </button>
                     <div x-show="open" x-transition.opacity class="absolute left-0 top-full mt-0 w-48 rounded bg-white py-2 shadow-lg ring-1 ring-black/5">
+                        <a href="https://secure.accessacs.com/access/oglogin.aspx?sn=101558" target="_blank" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Online Giving</a>
                         <a href="{{ route('resources.the-happenings') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">The Happenings</a>
                         <a href="{{ route('ministries.upcoming-events') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Upcoming Events</a>
                         <a href="{{ route('resources.untimely-ramblings') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Untimely Ramblings</a>
@@ -112,6 +113,7 @@
                     <svg :class="open && 'rotate-180'" class="h-4 w-4 transition-transform" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
                 </button>
                 <div x-show="open" x-collapse class="ml-4 space-y-1">
+                    <a href="https://secure.accessacs.com/access/oglogin.aspx?sn=101558" target="_blank" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Online Giving</a>
                     <a href="{{ route('resources.the-happenings') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">The Happenings</a>
                     <a href="{{ route('ministries.upcoming-events') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Upcoming Events</a>
                     <a href="{{ route('resources.untimely-ramblings') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Untimely Ramblings</a>
