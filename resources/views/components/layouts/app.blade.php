@@ -15,6 +15,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
+    @env('production')
+    <script defer src="https://api.pirsch.io/pa.js"
+            id="pianjs"
+            data-code="NKTjU0USoty6BIiMqFrRqKdANqqI1vj3"></script>
+    @endenv
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
 </head>
