@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\TeamMembers;
 
+use App\Filament\NavigationGroup;
 use App\Filament\Resources\TeamMembers\Pages\CreateTeamMember;
 use App\Filament\Resources\TeamMembers\Pages\EditTeamMember;
 use App\Filament\Resources\TeamMembers\Pages\ListTeamMembers;
@@ -21,7 +22,7 @@ class TeamMemberResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedUsers;
 
-    protected static UnitEnum|string|null $navigationGroup = 'Website Resources';
+    protected static UnitEnum|string|null $navigationGroup = NavigationGroup::WebsiteResources;
 
     public static function form(Schema $schema): Schema
     {

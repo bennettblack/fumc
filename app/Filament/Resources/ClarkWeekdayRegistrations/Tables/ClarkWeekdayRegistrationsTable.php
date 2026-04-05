@@ -1,37 +1,41 @@
 <?php
 
-namespace App\Filament\Resources\ContactSubmissions\Tables;
+namespace App\Filament\Resources\ClarkWeekdayRegistrations\Tables;
 
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
-use Filament\Actions\ViewAction;
+use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
-class ContactSubmissionsTable
+class ClarkWeekdayRegistrationsTable
 {
     public static function configure(Table $table): Table
     {
         return $table
             ->defaultSort('created_at', 'desc')
             ->columns([
-                TextColumn::make('name')
+                TextColumn::make('child_name')
+                    ->searchable()
+                    ->sortable(),
+                TextColumn::make('parent_names')
                     ->searchable()
                     ->sortable(),
                 TextColumn::make('email')
                     ->searchable(),
-                TextColumn::make('subject')
-                    ->searchable()
-                    ->limit(40),
+                TextColumn::make('schedule')
+                    ->sortable(),
+                IconColumn::make('church_member')
+                    ->boolean()
+                    ->label('Member'),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
-                    ->label('Received'),
+                    ->label('Submitted'),
             ])
             ->recordActions([
-                ViewAction::make(),
                 EditAction::make(),
                 DeleteAction::make(),
             ])

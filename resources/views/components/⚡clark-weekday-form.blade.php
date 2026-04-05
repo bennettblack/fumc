@@ -80,7 +80,7 @@ new class extends Component
 
 <div>
     @if($submitted)
-        <div class="rounded-md bg-teal/10 p-6 text-center">
+        <div class="rounded-md bg-teal/10 p-6 text-center mt-12">
             <p class="font-semibold text-teal">Thank you for your submission!</p>
             <p class="mt-1 text-sm text-gray-600">We've received your waiting list request and will be in touch soon.</p>
         </div>

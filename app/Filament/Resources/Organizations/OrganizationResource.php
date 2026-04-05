@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Organizations;
 
+use App\Filament\NavigationGroup;
 use App\Filament\Resources\Organizations\Pages\CreateOrganization;
 use App\Filament\Resources\Organizations\Pages\EditOrganization;
 use App\Filament\Resources\Organizations\Pages\ListOrganizations;
@@ -21,7 +22,7 @@ class OrganizationResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedUserGroup;
 
-    protected static UnitEnum|string|null $navigationGroup = 'Website Resources';
+    protected static UnitEnum|string|null $navigationGroup = NavigationGroup::WebsiteResources;
 
     public static function form(Schema $schema): Schema
     {
