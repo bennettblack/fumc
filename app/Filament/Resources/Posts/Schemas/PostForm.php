@@ -6,6 +6,7 @@ use App\Enums\PostType;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\RichEditor\ToolbarButtonGroup;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Section;
@@ -34,15 +35,16 @@ class PostForm
                             ->helperText('A short summary shown in listings.'),
                         RichEditor::make('body')
                             ->required()
+                            ->fileAttachmentsDisk('r2')
+                            ->fileAttachmentsDirectory('posts')
+                            ->fileAttachmentsVisibility('public')
                             ->toolbarButtons([
-                                'bold',
-                                'italic',
-                                'link',
-                                'bulletList',
-                                'orderedList',
-                                'h2',
-                                'h3',
-                            ]),
+                                ['bold', 'italic', 'underline', 'strike', 'link'],
+                                [ToolbarButtonGroup::make('Paragraph', ['paragraph', 'h1', 'h2', 'h3'])->textualButtons()],
+                                [ToolbarButtonGroup::make('Alignment', ['alignStart', 'alignCenter', 'alignEnd', 'alignJustify'])],
+                                ['blockquote', 'bulletList', 'orderedList'],
+                                ['undo', 'redo'],
+                            ])
                     ]),
                 Section::make('Details')
                     ->columnSpan(4)
