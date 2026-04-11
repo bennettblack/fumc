@@ -43,8 +43,8 @@ class OrganizationForm
                             ->imageAspectRatio('4:3')
                             ->automaticallyCropImagesToAspectRatio()
                             ->automaticallyResizeImagesMode('cover')
-                            ->automaticallyResizeImagesToWidth('800')
-                            ->automaticallyResizeImagesToHeight('600')
+                            ->automaticallyResizeImagesToWidth('1200')
+                            ->automaticallyResizeImagesToHeight('900')
                             ->imageEditor()
                             ->saveUploadedFileUsing(function (TemporaryUploadedFile $file): string {
                                 $filename = 'organizations/'.Str::ulid().'.webp';
