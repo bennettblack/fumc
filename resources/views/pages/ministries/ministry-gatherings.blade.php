@@ -1,32 +1,34 @@
 <x-layouts.app title="Ministry Gatherings">
     <x-page-hero title="Ministry Gatherings" subtitle="Community groups within our church family serving, connecting, and growing together in faith." />
 
-    <section class="py-16 sm:py-24">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section class="py-16 sm:py-20">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             @if($gatherings->isEmpty())
                 <p class="text-center text-lg text-gray-500">Ministry gatherings coming soon.</p>
             @else
-                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="grid grid-cols-1 gap-x-10 gap-y-14 md:grid-cols-2">
                     @foreach($gatherings as $gathering)
-                        <div class="group overflow-hidden rounded-md bg-white shadow-sm ring-1 ring-black/5 transition-shadow hover:shadow-md">
-                            @if($gathering->image)
-                                <img src="{{ Storage::disk('r2')->url($gathering->image) }}" alt="{{ $gathering->name }}" class="h-36 w-full object-cover sm:h-48">
-                            @else
-                                <div class="flex h-2 {{ $loop->iteration % 2 === 1 ? 'bg-teal' : 'bg-red' }}"></div>
-                            @endif
-                            <div class="p-6">
-                                <div class="flex items-start gap-4">
-                                    <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full {{ $loop->iteration % 2 === 1 ? 'bg-teal/10 text-teal' : 'bg-red/10 text-red' }}">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 20 20" fill="currentColor"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" /></svg>
+                        <article>
+                            <div class="overflow-hidden rounded-md bg-neutral-100">
+                                @if($gathering->image)
+                                    <img src="{{ Storage::disk('r2')->url($gathering->image) }}" alt="{{ $gathering->name }}" class="aspect-4/3 w-full object-cover">
+                                @else
+                                    <div class="flex aspect-4/3 w-full items-center justify-center text-neutral-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                                        </svg>
                                     </div>
-                                    <div>
-                                        <h3 class="text-lg font-bold text-black">{{ $gathering->name }}</h3>
-                                        <p class="mt-1 text-xs font-semibold uppercase tracking-wider {{ $loop->iteration % 2 === 1 ? 'text-teal' : 'text-red' }}">{{ $gathering->contact }}</p>
-                                    </div>
-                                </div>
-                                <div class="mt-4 prose prose-sm text-gray-600">{!! $gathering->description !!}</div>
+                                @endif
                             </div>
-                        </div>
+
+                            <h2 class="mt-6 text-2xl font-bold text-black">{{ $gathering->name }}</h2>
+                            <div class="mt-3 w-16 border-t-4 border-red"></div>
+                            <div class="prose prose-gray mt-4 max-w-none text-base leading-7 text-gray-600">{!! $gathering->description !!}</div>
+                            <p class="mt-5 text-sm text-gray-500">
+                                <span class="font-semibold uppercase tracking-wider text-red">Contact</span>
+                                <span class="ml-2">{{ $gathering->contact }}</span>
+                            </p>
+                        </article>
                     @endforeach
                 </div>
             @endif
