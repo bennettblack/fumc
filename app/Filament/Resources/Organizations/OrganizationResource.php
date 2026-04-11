@@ -20,6 +20,14 @@ class OrganizationResource extends Resource
 {
     protected static ?string $model = Organization::class;
 
+    protected static ?string $slug = 'ministry-gatherings';
+
+    protected static ?string $navigationLabel = 'Ministry Gatherings';
+
+    protected static ?string $modelLabel = 'Ministry Gathering';
+
+    protected static ?string $pluralModelLabel = 'Ministry Gatherings';
+
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedUserGroup;
 
     protected static UnitEnum|string|null $navigationGroup = NavigationGroup::WebsiteResources;

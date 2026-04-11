@@ -20,7 +20,7 @@ class OrganizationForm
         return $schema
             ->columns(12)
             ->components([
-                Section::make('Organization')
+                Section::make('Ministry Gathering')
                     ->columnSpan(8)
                     ->schema([
                         TextInput::make('name')

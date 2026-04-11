@@ -20,7 +20,7 @@
                         <span class="block px-4 py-2 text-sm text-gray-400">Adult <span class="text-xs">(Coming Soon)</span></span>
                         <a href="{{ route('ministries.children') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Children</a>
                         <span class="block px-4 py-2 text-sm text-gray-400">Missions/Outreach <span class="text-xs">(Coming Soon)</span></span>
-                        <a href="{{ route('ministries.organizations') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Organizations</a>
+                        <a href="{{ route('ministries.ministry-gatherings') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Ministry Gatherings</a>
                         <span class="block px-4 py-2 text-sm text-gray-400">Student <span class="text-xs">(Coming Soon)</span></span>
                         <a href="{{ route('ministries.worship-music') }}" class="block px-4 py-2 text-sm text-black hover:bg-light-gray hover:text-red">Worship & Music</a>
                     </div>
@@ -85,7 +85,7 @@
                     <span class="block px-3 py-2 text-sm text-gray-400">Adult (Coming Soon)</span>
                     <a href="{{ route('ministries.children') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Children</a>
                     <span class="block px-3 py-2 text-sm text-gray-400">Missions/Outreach (Coming Soon)</span>
-                    <a href="{{ route('ministries.organizations') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Organizations</a>
+                    <a href="{{ route('ministries.ministry-gatherings') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Ministry Gatherings</a>
                     <span class="block px-3 py-2 text-sm text-gray-400">Student (Coming Soon)</span>
                     <a href="{{ route('ministries.worship-music') }}" class="block rounded px-3 py-2 text-sm hover:bg-light-gray hover:text-red">Worship & Music</a>
                 </div>
