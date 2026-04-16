@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Filament\Resources\Posts\Pages;
+namespace App\Filament\Resources\Bulletins\Pages;
 
-use App\Filament\Resources\Posts\PostResource;
+use App\Filament\Resources\Bulletins\BulletinResource;
 use Filament\Actions\DeleteAction;
 use Filament\Resources\Pages\EditRecord;
 
-class EditPost extends EditRecord
+class EditBulletin extends EditRecord
 {
-    protected static string $resource = PostResource::class;
+    protected static string $resource = BulletinResource::class;
 
     protected function getHeaderActions(): array
     {

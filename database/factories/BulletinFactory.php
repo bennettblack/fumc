@@ -2,14 +2,13 @@
 
 namespace Database\Factories;
 
-use App\Enums\PostType;
-use App\Models\Post;
+use App\Models\Bulletin;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends Factory<Post>
+ * @extends Factory<Bulletin>
  */
-class PostFactory extends Factory
+class BulletinFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -19,12 +18,9 @@ class PostFactory extends Factory
     public function definition(): array
     {
         return [
-            'type' => fake()->randomElement(PostType::cases()),
-            'title' => fake()->sentence(4),
-            'description' => fake()->optional(0.7)->sentence(),
-            'image' => null,
-            'body' => fake()->paragraphs(3, true),
+            'title' => fake()->sentence(3),
             'published_at' => fake()->optional(0.8)->dateTimeBetween('-6 months'),
+            'file_name' => null,
         ];
     }
 }
