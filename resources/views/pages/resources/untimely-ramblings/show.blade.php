@@ -14,7 +14,7 @@
             </header>
 
             {{-- Body --}}
-            <div class="prose prose-lg prose-gray mt-10 max-w-none [&_img]:max-w-full [&_img]:rounded-md">
+            <div class="prose prose-lg prose-gray mt-10 max-w-none [&_img]:max-w-lg [&_img]:h-auto [&_img]:rounded-md">
                 {!! $rambling->body !!}
             </div>
 
