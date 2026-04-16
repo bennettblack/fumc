@@ -22,9 +22,6 @@ class UntimelyRamblingForm
                         TextInput::make('title')
                             ->required()
                             ->maxLength(255),
-                        TextInput::make('description')
-                            ->maxLength(255)
-                            ->helperText('A short summary shown in listings.'),
                         RichEditor::make('body')
                             ->required()
                             ->fileAttachmentsDisk('r2')
@@ -35,6 +32,7 @@ class UntimelyRamblingForm
                                 [ToolbarButtonGroup::make('Paragraph', ['paragraph', 'h1', 'h2', 'h3'])->textualButtons()],
                                 [ToolbarButtonGroup::make('Alignment', ['alignStart', 'alignCenter', 'alignEnd', 'alignJustify'])],
                                 ['blockquote', 'bulletList', 'orderedList'],
+                                ['attachFiles'],
                                 ['undo', 'redo'],
                             ]),
                     ]),
