@@ -2,15 +2,12 @@
 
 namespace App\Filament\Resources\Organizations\Schemas;
 
+use App\Services\WebpImageConverter;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Str;
-use Intervention\Image\Encoders\WebpEncoder;
-use Intervention\Image\Laravel\Facades\Image;
 use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
 
 class OrganizationForm
@@ -46,16 +43,9 @@ class OrganizationForm
                             ->automaticallyResizeImagesToWidth('1200')
                             ->automaticallyResizeImagesToHeight('900')
                             ->imageEditor()
-                            ->saveUploadedFileUsing(function (TemporaryUploadedFile $file): string {
-                                $filename = 'organizations/'.Str::ulid().'.webp';
-
-                                $webp = Image::decode($file->getRealPath())
-                                    ->encode(new WebpEncoder(80));
-
-                                Storage::disk('r2')->put($filename, (string) $webp);
-
-                                return $filename;
-                            })
+                            ->saveUploadedFileUsing(
+                                fn (TemporaryUploadedFile $file): string => WebpImageConverter::store($file, 'organizations'),
+                            )
                             ->helperText('Will be cropped to 4:3 and converted to WebP.'),
                     ]),
                 Section::make('Contact')

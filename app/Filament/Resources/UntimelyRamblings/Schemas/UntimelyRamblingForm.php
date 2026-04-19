@@ -2,12 +2,14 @@
 
 namespace App\Filament\Resources\UntimelyRamblings\Schemas;
 
+use App\Services\WebpImageConverter;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\RichEditor\ToolbarButtonGroup;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
+use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
 
 class UntimelyRamblingForm
 {
@@ -27,6 +29,9 @@ class UntimelyRamblingForm
                             ->fileAttachmentsDisk('r2')
                             ->fileAttachmentsDirectory('untimely-ramblings')
                             ->fileAttachmentsVisibility('public')
+                            ->saveUploadedFileAttachmentUsing(
+                                fn (TemporaryUploadedFile $file): string => WebpImageConverter::store($file, 'untimely-ramblings'),
+                            )
                             ->toolbarButtons([
                                 ['bold', 'italic', 'underline', 'strike', 'link'],
                                 [ToolbarButtonGroup::make('Paragraph', ['paragraph', 'h1', 'h2', 'h3'])->textualButtons()],

@@ -2,15 +2,12 @@
 
 namespace App\Filament\Resources\TeamMembers\Schemas;
 
+use App\Services\WebpImageConverter;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Str;
-use Intervention\Image\Encoders\WebpEncoder;
-use Intervention\Image\Laravel\Facades\Image;
 use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
 
 class TeamMemberForm
@@ -57,16 +54,9 @@ class TeamMemberForm
                             ->automaticallyResizeImagesToWidth('600')
                             ->automaticallyResizeImagesToHeight('800')
                             ->imageEditor()
-                            ->saveUploadedFileUsing(function (TemporaryUploadedFile $file): string {
-                                $filename = 'team/'.Str::ulid().'.webp';
-
-                                $webp = Image::decode($file->getRealPath())
-                                    ->encode(new WebpEncoder(80));
-
-                                Storage::disk('r2')->put($filename, (string) $webp);
-
-                                return $filename;
-                            })
+                            ->saveUploadedFileUsing(
+                                fn (TemporaryUploadedFile $file): string => WebpImageConverter::store($file, 'team'),
+                            )
                             ->helperText('Portrait orientation (3:4). Converted to WebP.'),
                     ]),
             ]);
