@@ -49,13 +49,9 @@ class StatsOverview extends StatsOverviewWidget
                 ->color($weeklySubmissions > 0 ? 'warning' : 'gray'),
 
             Stat::make('Published Ramblings', UntimelyRambling::published()->count())
-                ->description('Journal entries live on the site')
-                ->descriptionIcon(Heroicon::OutlinedBookOpen)
                 ->color('success'),
 
             Stat::make('Bulletins Posted', Bulletin::published()->count())
-                ->description('Weekly bulletins archived')
-                ->descriptionIcon(Heroicon::OutlinedDocumentText)
                 ->color('success'),
         ];
     }
