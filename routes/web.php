@@ -15,7 +15,7 @@ Route::view('/', 'pages.home')->name('home');
 Route::view('/ministries/children', 'pages.ministries.children')->name('ministries.children');
 Route::view('/ministries/worship-music', 'pages.ministries.worship-music')->name('ministries.worship-music');
 Route::get('/ministries/upcoming-events', fn () => view('pages.ministries.upcoming-events', [
-    'events' => Event::where('starts_at', '>=', now())->orderBy('starts_at')->get(),
+    'events' => Event::where('starts_at', '>=', today()->toDateString())->orderBy('starts_at')->get(),
 ]))->name('ministries.upcoming-events');
 Route::get('/ministries/ministry-gatherings', fn () => view('pages.ministries.ministry-gatherings', ['gatherings' => Organization::all()]))->name('ministries.ministry-gatherings');
 

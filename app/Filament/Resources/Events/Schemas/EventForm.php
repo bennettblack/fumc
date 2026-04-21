@@ -2,7 +2,7 @@
 
 namespace App\Filament\Resources\Events\Schemas;
 
-use Filament\Forms\Components\DateTimePicker;
+use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
@@ -24,7 +24,7 @@ class EventForm
                 Section::make('Details')
                     ->columnSpan(4)
                     ->schema([
-                        DateTimePicker::make('starts_at')
+                        DatePicker::make('starts_at')
                             ->required(),
                     ]),
             ]);

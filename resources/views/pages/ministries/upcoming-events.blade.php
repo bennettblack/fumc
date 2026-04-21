@@ -15,7 +15,7 @@
                             </div>
                             <div>
                                 <h3 class="text-lg font-bold text-black">{{ $event->title }}</h3>
-                                <p class="mt-1 text-sm text-gray-500">{{ $event->starts_at->format('l, F j, Y \a\t g:i A') }}</p>
+                                <p class="mt-1 text-sm text-gray-500">{{ $event->starts_at->format('l, F j, Y') }}</p>
                             </div>
                         </div>
                     @endforeach

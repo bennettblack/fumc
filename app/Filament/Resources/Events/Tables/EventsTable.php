@@ -19,7 +19,7 @@ class EventsTable
                     ->searchable()
                     ->sortable(),
                 TextColumn::make('starts_at')
-                    ->dateTime()
+                    ->date()
                     ->sortable(),
                 TextColumn::make('created_at')
                     ->dateTime()
