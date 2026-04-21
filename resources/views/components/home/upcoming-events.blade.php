@@ -7,42 +7,24 @@
         </div>
 
         <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {{-- Placeholder event cards — replace with dynamic content --}}
-            <div class="group flex gap-5 rounded-md border border-gray-200 bg-white p-5 transition-shadow hover:shadow-md">
-                <div class="shrink-0 text-center">
-                    <p class="text-3xl font-bold leading-none text-red">6</p>
-                    <p class="mt-1 text-xs font-semibold uppercase tracking-wider text-gray-500">Apr</p>
+            @foreach($events as $event)
+                <div class="flex flex-col gap-5 rounded-md border border-gray-200 bg-white p-5 transition-shadow hover:shadow-md">
+                    <div class="flex gap-5">
+                        <div class="shrink-0 text-center">
+                            <p class="text-3xl font-bold leading-none text-red">{{ $event->starts_at->format('j') }}</p>
+                            <p class="mt-1 text-xs font-semibold uppercase tracking-wider text-gray-500">{{ $event->starts_at->format('M') }}</p>
+                        </div>
+                        <div class="min-w-0">
+                            <h3 class="text-base font-bold text-black">{{ $event->title }}</h3>
+                            <p class="mt-0.5 text-sm font-medium text-teal">{{ $event->starts_at->format('l') }}</p>
+                        </div>
+                    </div>
+                    <a href="{{ route('ministries.upcoming-events.ics', $event) }}" class="mt-auto inline-flex w-fit items-center gap-2 rounded-full border border-red/40 bg-white px-4 py-1.5 text-xs font-semibold text-red transition hover:border-red hover:bg-red hover:text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" /></svg>
+                        Add to Calendar
+                    </a>
                 </div>
-                <div>
-                    <h3 class="text-base font-bold text-black">Palm Sunday Service</h3>
-                    <p class="mt-0.5 text-sm font-medium text-teal">10:30 AM</p>
-                    <p class="mt-2 text-sm leading-relaxed text-gray-600">Join us as we celebrate Jesus' triumphal entry into Jerusalem with a special worship service.</p>
-                </div>
-            </div>
-
-            <div class="group flex gap-5 rounded-md border border-gray-200 bg-white p-5 transition-shadow hover:shadow-md">
-                <div class="shrink-0 text-center">
-                    <p class="text-3xl font-bold leading-none text-red">10</p>
-                    <p class="mt-1 text-xs font-semibold uppercase tracking-wider text-gray-500">Apr</p>
-                </div>
-                <div>
-                    <h3 class="text-base font-bold text-black">Maundy Thursday</h3>
-                    <p class="mt-0.5 text-sm font-medium text-teal">6:00 PM</p>
-                    <p class="mt-2 text-sm leading-relaxed text-gray-600">A reflective evening service commemorating the Last Supper with communion.</p>
-                </div>
-            </div>
-
-            <div class="group flex gap-5 rounded-md border border-gray-200 bg-white p-5 transition-shadow hover:shadow-md">
-                <div class="shrink-0 text-center">
-                    <p class="text-3xl font-bold leading-none text-red">13</p>
-                    <p class="mt-1 text-xs font-semibold uppercase tracking-wider text-gray-500">Apr</p>
-                </div>
-                <div>
-                    <h3 class="text-base font-bold text-black">Easter Sunday</h3>
-                    <p class="mt-0.5 text-sm font-medium text-teal">10:30 AM</p>
-                    <p class="mt-2 text-sm leading-relaxed text-gray-600">Celebrate the resurrection of Christ with our Easter worship celebration.</p>
-                </div>
-            </div>
+            @endforeach
         </div>
 
         <div class="mt-10 text-center">
