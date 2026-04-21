@@ -19,7 +19,7 @@ class EventFactory extends Factory
     {
         return [
             'title' => fake()->sentence(3),
-            'starts_at' => fake()->dateTimeBetween('now', '+3 months'),
+            'starts_at' => fake()->dateTimeBetween('now', '+3 months')->format('Y-m-d'),
         ];
     }
 }

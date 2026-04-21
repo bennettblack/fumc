@@ -6,8 +6,10 @@ use App\Models\Happening;
 use App\Models\Organization;
 use App\Models\TeamMember;
 use App\Models\UntimelyRambling;
+use App\Services\EventIcsGenerator;
 use App\Services\VimeoFeed;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Str;
 
 Route::view('/', 'pages.home')->name('home');
 
@@ -17,6 +19,14 @@ Route::view('/ministries/worship-music', 'pages.ministries.worship-music')->name
 Route::get('/ministries/upcoming-events', fn () => view('pages.ministries.upcoming-events', [
     'events' => Event::where('starts_at', '>=', today()->toDateString())->orderBy('starts_at')->get(),
 ]))->name('ministries.upcoming-events');
+Route::get('/ministries/upcoming-events/{event}/ics', fn (Event $event) => response(
+    EventIcsGenerator::generate($event),
+    200,
+    [
+        'Content-Type' => 'text/calendar; charset=utf-8',
+        'Content-Disposition' => 'attachment; filename="'.Str::slug($event->title).'.ics"',
+    ],
+))->name('ministries.upcoming-events.ics');
 Route::get('/ministries/ministry-gatherings', fn () => view('pages.ministries.ministry-gatherings', ['gatherings' => Organization::all()]))->name('ministries.ministry-gatherings');
 
 // About
