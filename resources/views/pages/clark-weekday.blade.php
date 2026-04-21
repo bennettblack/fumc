@@ -3,10 +3,10 @@
     <section class="relative">
         <div class="aspect-[16/9] w-full overflow-hidden sm:aspect-[21/9] lg:aspect-[3/1]">
             <img src="{{ Storage::disk('r2')->url('clark_i.jpg') }}" alt="Clark Weekday" class="h-full w-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+            <div class="absolute inset-0 hidden bg-gradient-to-t from-black/70 via-black/40 to-transparent sm:block"></div>
         </div>
-        <div class="absolute inset-0 flex items-end">
-            <div class="mx-auto w-full max-w-7xl px-4 pb-10 sm:px-6 sm:pb-14 lg:px-8">
+        <div class="bg-neutral-900 py-10 sm:absolute sm:inset-x-0 sm:bottom-0 sm:bg-transparent sm:py-0 sm:pb-14">
+            <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
                 <p class="text-sm font-semibold uppercase tracking-wider text-red">First United Methodist Church</p>
                 <h1 class="mt-1 text-3xl font-bold text-white sm:text-4xl lg:text-5xl">Clark Weekday</h1>
                 <p class="mt-3 max-w-2xl text-base text-gray-200 sm:text-lg">The Clark Weekday Program "Clark", is dedicated to providing quality care in a loving and educational environment. Your child is very important to us at the First United Methodist Church. We want children to have nurturing, happy experiences while in our care. We will provide a safe, secure, and stimulating environment so they can learn and develop in their own special ways.</p>
