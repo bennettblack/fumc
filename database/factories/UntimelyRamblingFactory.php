@@ -19,7 +19,6 @@ class UntimelyRamblingFactory extends Factory
     {
         return [
             'title' => fake()->sentence(4),
-            'description' => fake()->optional(0.7)->sentence(),
             'body' => collect(fake()->paragraphs(rand(3, 6)))
                 ->map(fn (string $p) => "<p>{$p}</p>")
                 ->implode(''),

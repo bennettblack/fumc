@@ -1,52 +1,66 @@
 <x-layouts.app title="Untimely Ramblings">
-    <x-page-hero title="Untimely Ramblings" subtitle="Thoughts, reflections, and devotions from our church family." />
+    <x-page-hero title="Untimely Ramblings" subtitle="A journal of thoughts, reflections, and devotions from our church family." />
 
     <section class="py-16 sm:py-20">
-        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             @if($ramblings->isEmpty())
                 <p class="text-center text-lg text-gray-500">No ramblings yet. Check back soon.</p>
             @else
-                @php $featured = $ramblings->first(); $rest = $ramblings->skip(1); @endphp
+                @php
+                    $featured = $ramblings->first();
+                    $rest = $ramblings->skip(1);
+                    $excerpt = fn ($body, $limit = 220) => \Illuminate\Support\Str::limit(trim(preg_replace('/\s+/', ' ', strip_tags($body))), $limit);
+                @endphp
 
-                {{-- Featured post --}}
-                <a href="{{ route('resources.untimely-ramblings.show', $featured) }}" class="group block">
-                    <div class="grid grid-cols-1 items-center gap-8 lg:grid-cols-2">
-                        <div class="overflow-hidden rounded-md bg-neutral-100">
-                            <div class="flex aspect-4/3 w-full items-center justify-center bg-gradient-to-br from-teal/10 to-teal/5">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-teal/30" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" /></svg>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="text-sm font-semibold uppercase tracking-wider text-teal">{{ $featured->published_at->format('F j, Y') }}</p>
-                            <h2 class="mt-3 text-2xl font-bold text-black group-hover:text-red sm:text-3xl">{{ $featured->title }}</h2>
-                            <div class="mt-4 w-16 border-t-4 border-red"></div>
-                            @if($featured->description)
-                                <p class="mt-4 text-base leading-7 text-gray-600">{{ $featured->description }}</p>
-                            @endif
-                            <p class="mt-6 text-sm font-semibold text-red group-hover:underline">Read more &rarr;</p>
-                        </div>
-                    </div>
-                </a>
+                {{-- Featured entry --}}
+                <article class="relative overflow-hidden rounded-md bg-teal/5 px-6 py-10 sm:px-12 sm:py-14">
+                    <span aria-hidden="true" class="pointer-events-none absolute -top-10 left-2 select-none font-display text-[10rem] leading-none text-teal/15 sm:-top-14 sm:left-6 sm:text-[14rem]">&ldquo;</span>
+                    <a href="{{ route('resources.untimely-ramblings.show', $featured) }}" class="group relative block">
+                        <p class="text-xs font-semibold uppercase tracking-widest text-teal">
+                            Latest Entry
+                            <span class="mx-2 text-teal/40">&bull;</span>
+                            <span class="text-gray-500">{{ $featured->published_at->format('F j, Y') }}</span>
+                        </p>
+                        <h2 class="mt-5 font-display text-3xl font-bold leading-tight text-black transition group-hover:text-red sm:text-4xl">
+                            {{ $featured->title }}
+                        </h2>
+                        <p class="mt-5 text-base leading-7 text-gray-700 sm:text-lg sm:leading-8">
+                            {{ $excerpt($featured->body) }}
+                        </p>
+                        <p class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-red transition group-hover:gap-3">
+                            Continue reading
+                            <span aria-hidden="true">&rarr;</span>
+                        </p>
+                    </a>
+                </article>
 
-                {{-- Remaining posts --}}
+                {{-- Archive --}}
                 @if($rest->isNotEmpty())
-                    <div class="mt-14 border-t border-neutral-200 pt-14">
-                        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
+                    <div class="mt-20 border-t border-neutral-200 pt-16">
+                        <p class="text-center text-sm font-semibold uppercase tracking-wider text-teal">From the Archive</p>
+                        <div class="mx-auto mt-3 w-24 border-t-4 border-red"></div>
+
+                        <ul class="mt-12 divide-y divide-neutral-200">
                             @foreach($rest as $rambling)
-                                <a href="{{ route('resources.untimely-ramblings.show', $rambling) }}" class="group block">
-                                    <div class="overflow-hidden rounded-md bg-neutral-100">
-                                        <div class="flex aspect-video w-full items-center justify-center bg-gradient-to-br from-teal/10 to-teal/5">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-teal/30" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" /></svg>
+                                <li>
+                                    <a href="{{ route('resources.untimely-ramblings.show', $rambling) }}" class="group grid grid-cols-1 gap-3 py-8 sm:grid-cols-12 sm:gap-8">
+                                        <p class="text-xs font-semibold uppercase tracking-widest text-teal sm:col-span-3 sm:pt-2">
+                                            {{ $rambling->published_at->format('F j, Y') }}
+                                        </p>
+                                        <div class="sm:col-span-9">
+                                            <h3 class="font-display text-2xl font-bold leading-snug text-black transition group-hover:text-red sm:text-3xl">
+                                                {{ $rambling->title }}
+                                            </h3>
+                                            <p class="mt-3 text-base leading-7 text-gray-600">{{ $excerpt($rambling->body, 160) }}</p>
+                                            <p class="mt-4 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-red transition group-hover:gap-3">
+                                                Read
+                                                <span aria-hidden="true">&rarr;</span>
+                                            </p>
                                         </div>
-                                    </div>
-                                    <p class="mt-4 text-sm font-semibold uppercase tracking-wider text-teal">{{ $rambling->published_at->format('F j, Y') }}</p>
-                                    <h3 class="mt-2 text-lg font-bold text-black group-hover:text-red">{{ $rambling->title }}</h3>
-                                    @if($rambling->description)
-                                        <p class="mt-1 text-sm leading-6 text-gray-600">{{ $rambling->description }}</p>
-                                    @endif
-                                </a>
+                                    </a>
+                                </li>
                             @endforeach
-                        </div>
+                        </ul>
                     </div>
                 @endif
             @endif

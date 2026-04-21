@@ -14,7 +14,6 @@ class UntimelyRambling extends Model
 
     protected $fillable = [
         'title',
-        'description',
         'body',
         'published_at',
     ];
