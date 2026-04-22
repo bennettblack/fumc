@@ -59,6 +59,7 @@
 
                 <a href="{{ route('clark-weekday') }}" class="px-3 py-2 text-sm font-medium text-black hover:text-red transition-colors {{ request()->routeIs('clark-weekday') ? 'text-red' : '' }}">Clark Weekday</a>
 
+                <a href="https://secure.accessacs.com/access/oglogin.aspx?sn=101558" target="_blank" rel="noopener" class="ml-2 inline-flex items-center rounded border-2 border-teal px-4 py-1.5 text-sm font-semibold text-teal hover:bg-teal hover:text-white transition-colors">Give</a>
                 <a href="{{ route('contact') }}" class="ml-2 inline-flex items-center rounded bg-red px-4 py-2 text-sm font-semibold text-white hover:bg-red-dark transition-colors">Contact Us</a>
             </div>
 
@@ -124,7 +125,10 @@
 
             <a href="{{ route('clark-weekday') }}" class="block rounded px-3 py-2 text-base font-medium hover:bg-light-gray hover:text-red">Clark Weekday</a>
 
-            <a href="{{ route('contact') }}" class="mt-2 block rounded bg-red px-3 py-2 text-center text-base font-semibold text-white hover:bg-red-dark">Contact Us</a>
+            <div class="mt-3 grid grid-cols-2 gap-2">
+                <a href="https://secure.accessacs.com/access/oglogin.aspx?sn=101558" target="_blank" rel="noopener" class="block rounded border-2 border-teal px-3 py-1.5 text-center text-base font-semibold text-teal hover:bg-teal hover:text-white">Give</a>
+                <a href="{{ route('contact') }}" class="block rounded bg-red px-3 py-2 text-center text-base font-semibold text-white hover:bg-red-dark">Contact Us</a>
+            </div>
         </div>
     </div>
 </nav>

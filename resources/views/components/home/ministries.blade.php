@@ -36,7 +36,7 @@
                 <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?w=600&h=400&fit=crop" alt="Student Ministry" class="absolute inset-0 h-full w-full object-cover grayscale">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/20"></div>
                 <div class="absolute inset-0 flex flex-col justify-end p-6">
-                    <h3 class="text-lg font-bold text-white">Student Ministry</h3>
+                    <h3 class="text-lg font-bold text-white">Youth Ministry</h3>
                     <p class="mt-1 text-sm text-white/70">Coming soon.</p>
                 </div>
             </div>
