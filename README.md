@@ -41,6 +41,46 @@ php artisan boost:install
 
 Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
 
+## Site Settings
+
+Site-wide toggles (like the home page featured video) are stored in the `settings` table as key/value rows and edited through a Filament page at `/admin/site-settings` (under the **Administration** nav group).
+
+### Reading and writing
+
+`App\Models\Setting` exposes two static helpers. Reads are cached forever and invalidated automatically on save/delete:
+
+```php
+use App\Models\Setting;
+
+Setting::get('featured_video_url');          // ?string
+Setting::get('featured_video_url', 'fallback');
+Setting::set('featured_video_url', 'https://vimeo.com/123456789');
+Setting::set('featured_video_url', null);    // clears it
+```
+
+### Using a setting in a Blade section
+
+Follow the pattern in `App\View\Components\Home\FeaturedVideo` — read the setting in the constructor and return `false` from `shouldRender()` when it's unset, so the whole `<section>` disappears from the page:
+
+```php
+public function __construct()
+{
+    $this->videoId = $this->extractId(Setting::get('featured_video_url'));
+}
+
+public function shouldRender(): bool
+{
+    return $this->videoId !== null;
+}
+```
+
+### Adding a new setting
+
+1. Pick a snake_case key (e.g. `announcement_banner_text`) — no migration needed.
+2. Add a field to `SiteSettings::form()` in `app/Filament/Pages/SiteSettings.php`.
+3. Map it in `mount()` (fill from `Setting::get()`) and `save()` (persist with `Setting::set()`).
+4. Read it from Blade/components via `Setting::get('your_key')`.
+
 ## Contributing
 
 Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).

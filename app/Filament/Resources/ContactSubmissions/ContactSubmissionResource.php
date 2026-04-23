@@ -3,7 +3,6 @@
 namespace App\Filament\Resources\ContactSubmissions;
 
 use App\Filament\NavigationGroup;
-use App\Filament\Resources\ContactSubmissions\Pages\EditContactSubmission;
 use App\Filament\Resources\ContactSubmissions\Pages\ListContactSubmissions;
 use App\Filament\Resources\ContactSubmissions\Pages\ViewContactSubmission;
 use App\Filament\Resources\ContactSubmissions\Schemas\ContactSubmissionForm;
@@ -46,7 +45,6 @@ class ContactSubmissionResource extends Resource
         return [
             'index' => ListContactSubmissions::route('/'),
             'view' => ViewContactSubmission::route('/{record}'),
-            'edit' => EditContactSubmission::route('/{record}/edit'),
         ];
     }
 }

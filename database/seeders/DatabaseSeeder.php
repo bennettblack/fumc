@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder
             HappeningSeeder::class,
             EventSeeder::class,
             UntimelyRamblingSeeder::class,
+            ClarkWeekdayRegistrationSeeder::class,
         ]);
     }
 }

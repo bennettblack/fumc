@@ -4,6 +4,8 @@
 
     <x-home.info-bar />
 
+    <x-home.featured-video />
+
     <x-home.welcome />
 
     <x-home.ministries />

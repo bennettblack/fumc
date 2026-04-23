@@ -4,9 +4,9 @@ namespace App\Filament\Resources\ContactSubmissions\Pages;
 
 use App\Filament\Resources\ContactSubmissions\ContactSubmissionResource;
 use Filament\Actions\DeleteAction;
+use Filament\Infolists\Components\TextEntry;
 use Filament\Resources\Pages\ViewRecord;
 use Filament\Schemas\Schema;
-use Filament\Support\Components\Infolist\TextEntry;
 
 class ViewContactSubmission extends ViewRecord
 {
