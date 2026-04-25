@@ -196,8 +196,9 @@
         </section>
 
         {{-- Contact --}}
-        <section class="py-12 sm:py-16">
+        <section class="pb-12 pt-4 sm:pb-16 sm:pt-6">
             <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+                <div class="mx-auto mb-10 w-24 border-t border-gray-200"></div>
                 <div class="rounded-md border border-teal/20 bg-teal/5 p-6 text-center sm:p-8">
                     <p class="text-sm font-semibold uppercase tracking-wider text-teal">Get in Touch</p>
                     <h2 class="mt-2 text-xl font-bold text-black sm:text-2xl">Questions about FirstKids?</h2>
