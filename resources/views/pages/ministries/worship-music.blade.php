@@ -137,4 +137,27 @@
             </div>
         </div>
     </section>
+
+    {{-- Forms --}}
+    <section class="bg-teal/5 py-16 sm:py-24">
+        <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-sm font-semibold uppercase tracking-wider text-teal">Downloads</p>
+                <h2 class="mt-2 text-2xl font-bold text-black sm:text-3xl">Forms</h2>
+                <div class="mx-auto mt-3 w-16 border-t-4 border-teal"></div>
+            </div>
+            <div class="mt-8 space-y-3">
+                <a href="{{ Storage::disk('r2')->url('forms/CelebrationChoirForm.pdf') }}" target="_blank" rel="noopener" class="group flex items-center gap-4 rounded-md bg-white p-4 shadow-sm ring-1 ring-black/5 transition-shadow hover:shadow-md">
+                    <div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-teal/10 text-teal">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd" /></svg>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-base font-semibold text-black">Celebration Choir Enrollment Form</h3>
+                        <p class="text-xs text-gray-500">PDF</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="size-5 text-gray-400 transition-colors group-hover:text-teal" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" /></svg>
+                </a>
+            </div>
+        </div>
+    </section>
 </x-layouts.app>
