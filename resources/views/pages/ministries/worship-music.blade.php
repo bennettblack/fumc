@@ -58,7 +58,7 @@
     @endphp
 
     {{-- Group Listings --}}
-    <section class="bg-teal/5 py-16 sm:py-24">
+    <section class="bg-teal/5 py-12 sm:py-24">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="text-center">
                 <p class="text-sm font-semibold uppercase tracking-wider text-teal">Ensembles</p>
@@ -66,7 +66,7 @@
                 <div class="mx-auto mt-3 w-16 border-t-4 border-teal"></div>
             </div>
 
-            <div class="mt-12 space-y-12">
+            <div class="mt-10 space-y-10 sm:mt-12 sm:space-y-16">
                 {{-- Block 1: image left --}}
                 <div class="grid grid-cols-1 items-center gap-6 lg:grid-cols-12 lg:gap-8">
                     <div class="relative lg:order-1 lg:col-span-7">
@@ -77,7 +77,7 @@
                     </div>
                     <div class="space-y-4 lg:order-2 lg:col-span-5">
                         @foreach (array_slice($groups, 0, 3) as $group)
-                            <article class="rounded-md bg-white p-6 shadow-sm ring-1 ring-black/5 transition-shadow hover:shadow-md">
+                            <article class="rounded-md bg-white p-5 shadow-sm ring-1 ring-black/5 transition-shadow hover:shadow-md sm:p-6">
                                 <p class="text-xs font-semibold uppercase tracking-wider text-red">{{ $group['category'] }}</p>
                                 <h3 class="mt-1 text-lg font-bold text-black">{{ $group['name'] }}</h3>
                                 <p class="mt-2 text-sm leading-relaxed text-gray-600">{{ $group['description'] }}</p>
@@ -96,7 +96,7 @@
                     </div>
                     <div class="space-y-4 lg:order-1 lg:col-span-5">
                         @foreach (array_slice($groups, 3, 2) as $group)
-                            <article class="rounded-md bg-white p-6 shadow-sm ring-1 ring-black/5 transition-shadow hover:shadow-md">
+                            <article class="rounded-md bg-white p-5 shadow-sm ring-1 ring-black/5 transition-shadow hover:shadow-md sm:p-6">
                                 <p class="text-xs font-semibold uppercase tracking-wider text-red">{{ $group['category'] }}</p>
                                 <h3 class="mt-1 text-lg font-bold text-black">{{ $group['name'] }}</h3>
                                 <p class="mt-2 text-sm leading-relaxed text-gray-600">{{ $group['description'] }}</p>
@@ -115,7 +115,7 @@
                     </div>
                     <div class="space-y-4 lg:order-2 lg:col-span-5">
                         @foreach (array_slice($groups, 5, 2) as $group)
-                            <article class="rounded-md bg-white p-6 shadow-sm ring-1 ring-black/5 transition-shadow hover:shadow-md">
+                            <article class="rounded-md bg-white p-5 shadow-sm ring-1 ring-black/5 transition-shadow hover:shadow-md sm:p-6">
                                 <p class="text-xs font-semibold uppercase tracking-wider text-red">{{ $group['category'] }}</p>
                                 <h3 class="mt-1 text-lg font-bold text-black">{{ $group['name'] }}</h3>
                                 <p class="mt-2 text-sm leading-relaxed text-gray-600">{{ $group['description'] }}</p>
@@ -132,7 +132,7 @@
                     </div>
                     <div class="space-y-4 lg:order-1 lg:col-span-5">
                         @foreach (array_slice($groups, 7, 2) as $group)
-                            <article class="rounded-md bg-white p-6 shadow-sm ring-1 ring-black/5 transition-shadow hover:shadow-md">
+                            <article class="rounded-md bg-white p-5 shadow-sm ring-1 ring-black/5 transition-shadow hover:shadow-md sm:p-6">
                                 <p class="text-xs font-semibold uppercase tracking-wider text-red">{{ $group['category'] }}</p>
                                 <h3 class="mt-1 text-lg font-bold text-black">{{ $group['name'] }}</h3>
                                 <p class="mt-2 text-sm leading-relaxed text-gray-600">{{ $group['description'] }}</p>
@@ -145,7 +145,7 @@
     </section>
 
     {{-- Forms --}}
-    <section class="py-16 sm:py-24">
+    <section class="py-12 sm:py-24">
         <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
             <div class="text-center">
                 <p class="text-sm font-semibold uppercase tracking-wider text-red">Downloads</p>
