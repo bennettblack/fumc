@@ -173,7 +173,7 @@
                     <div class="relative">
                         <div class="absolute -bottom-4 -right-4 hidden aspect-4/3 w-full rounded-md sm:block bg-teal/20"></div>
                         <div class="relative overflow-hidden rounded-md shadow-lg">
-                            <img src="{{ Storage::disk('r2')->url('special_events.jpeg') }}" alt="Special Events" class="aspect-4/3 w-full object-cover">
+                            <img src="{{ Storage::disk('r2')->url('special-events.jpeg') }}" alt="Special Events" class="aspect-4/3 w-full object-cover">
                         </div>
                     </div>
                     <div>
